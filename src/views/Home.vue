@@ -2,6 +2,7 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <p>test {{test}}</p>
   </div>
 </template>
 
@@ -10,6 +11,11 @@
 import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
+  computed: {
+    test(){
+      return this.$store.state.test;
+    }
+  },
   name: 'Home',
   components: {
     HelloWorld
