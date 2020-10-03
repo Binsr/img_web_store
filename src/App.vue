@@ -1,11 +1,19 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <WebStoreApp></WebStoreApp>
   </div>
-  <router-view/>
 </template>
 
+
+<script>
+  import WebStoreApp from './WebStoreApp.vue';
+
+  export default{
+    components: {
+      WebStoreApp
+    }
+  }
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
