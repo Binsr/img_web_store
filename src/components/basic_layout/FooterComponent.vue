@@ -1,5 +1,6 @@
  <template>
     <div class="footerWraper">
+<<<<<<< HEAD
       <div class="top"> </div>
 
       <div class="content">
@@ -40,6 +41,8 @@
       </div>
       <div class="right">
       </div>
+=======
+>>>>>>> da2aa8c56bf17ae64280078ce8fbee0f9a1a9573
 
     </div>
 </template>
@@ -50,6 +53,7 @@ export default {
 }
 </script>
 
+<<<<<<< HEAD
 <style scoped>
 .footerWraper{
   color: white;
@@ -85,4 +89,8 @@ export default {
   }
 
 
+=======
+<style>
+.footerWraper{background-color:black; height: 100px; width: 100%};
+>>>>>>> da2aa8c56bf17ae64280078ce8fbee0f9a1a9573
 </style>

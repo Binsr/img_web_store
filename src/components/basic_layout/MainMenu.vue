@@ -2,7 +2,14 @@
   <div class="main-menu-container">
     <div class="main-menu__tabs-container">
         <div class="main-menu__tab"> 
+<<<<<<< HEAD
             <router-link to="/"><span class="main-menu-text">EDITORIAL</span></router-link>
+=======
+            <router-link to="/"><span class="main-menu-text">HOME</span></router-link>
+        </div>
+        <div class="main-menu__tab"> 
+            <router-link to="/editorial"><span class="main-menu-text">EDITORIAL</span></router-link>
+>>>>>>> da2aa8c56bf17ae64280078ce8fbee0f9a1a9573
         </div>
         <div class="main-menu__tab">
             <router-link to="/creative"><span class="main-menu-text">CREATIVE</span></router-link>
