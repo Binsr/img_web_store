@@ -1,26 +1,30 @@
 <template>
   <div class="snipetSectionWraper">
-    <h4 style="snipetSectionMsg">{{ data.msg }}</h4>
+    <h4 class="snipetSectionMsg">{{ data.msg }}</h4>
+    <div style="display:flex">
+      <PreviewImg v-for="d in data.images" :key="d" :data='d'></PreviewImg>
+    </div>
   </div>
 </template>
 
 <script>
+import PreviewImg from '@/components/basic_components/PreviewImg.vue'
 export default {
   name: 'SnipetSection',
-  props: ['data']
+  props: ['data'],
+  components: {PreviewImg}
 }
 </script>
 
 <style>
 .snipetSectionMsg{
   text-align: left;
+  margin-top: 20px;
 }
 .snipetSectionWraper{
   width: 90%;
   text-align: left;
   margin: 0 auto;
-  border-width: 1px;
-  border-style: solid;
-  border-color: red;
+  overflow-y: scroll;
 }
 </style>

@@ -4,7 +4,7 @@
   </div>
 </template>
 <script>
-    import SnipetSection from '@/components/sections/SnipetSection.vue'
+import SnipetSection from '@/components/sections/SnipetSection.vue'
 export default {
     computed:{
       dataArr(){

@@ -49,8 +49,8 @@ body{
 .centerPanel{
     width: 80vw;
     border: 1px solid black;
-    height: 100vh;
     margin: 10px auto;
+    height: auto !important;
     
 }
 
