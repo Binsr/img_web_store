@@ -6,11 +6,7 @@
 
 
 <script>
-<<<<<<< HEAD
-  import WebStoreApp from './WebStoreApp.vue';
-=======
   import WebStoreApp from './components/WebStoreApp.vue';
->>>>>>> da2aa8c56bf17ae64280078ce8fbee0f9a1a9573
 
   export default{
     components: {
@@ -45,8 +41,6 @@ body{
   font-weight: bold;
   color: #2c3e50;
 }
-<<<<<<< HEAD
-=======
 .centerPanel{
     width: 80vw;
     border: 1px solid black;
@@ -54,7 +48,6 @@ body{
     margin: 10px auto;
     
 }
->>>>>>> da2aa8c56bf17ae64280078ce8fbee0f9a1a9573
 
 #nav a.router-link-exact-active {
   color: #42b983;
