@@ -6,11 +6,7 @@
 
 
 <script>
-<<<<<<< HEAD
   import WebStoreApp from './WebStoreApp.vue';
-=======
-  import WebStoreApp from './components/WebStoreApp.vue';
->>>>>>> da2aa8c56bf17ae64280078ce8fbee0f9a1a9573
 
   export default{
     components: {
