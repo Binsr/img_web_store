@@ -1,7 +1,7 @@
  <template>
   <div class="main-menu-container">
     <div class="main-menu__tabs-container">
-        <div class="main-menu__tab"> 
+          <div class="main-menu__tab"> 
             <router-link to="/"><span class="main-menu-text">HOME</span></router-link>
         </div>
         <div class="main-menu__tab"> 
