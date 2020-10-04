@@ -11,5 +11,9 @@ export default {
 </script>
 
 <style>
-.footerWraper{background-color:black; height: 100px; width: 100%};
+.footerWraper{
+  background-color:black;
+  height: 100px;
+  width: 100%;
+}
 </style>
