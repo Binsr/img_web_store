@@ -6,7 +6,7 @@
 
 
 <script>
-  import WebStoreApp from './WebStoreApp.vue';
+  import WebStoreApp from './components/WebStoreApp.vue';
 
   export default{
     components: {
