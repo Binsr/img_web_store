@@ -1,5 +1,5 @@
 <template>
-  <div class="previewImgWraper">
+  <div class="previewImgWraper" :style="{width:  data.width, height: data.height }">
     
   </div>
 </template>
@@ -7,7 +7,8 @@
 <script>
 export default {
   name: 'PreviewImg',
-  props: ['data']
+  props: ['data'],
+  computed: {}
 }
 </script>
 
