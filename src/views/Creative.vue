@@ -1,5 +1,19 @@
 <template>
   <div class="about">
-    This is an about page
+    <StackSection :data='dataArr'></StackSection>
   </div>
 </template>
+
+<script>
+import StackSection from '@/components/sections/StackSection.vue'
+export default {
+    computed:{
+      dataArr(){
+        return this.$store.state.creativeSectionsData
+      }
+    },
+    components: {
+      StackSection
+    },
+}
+</script>

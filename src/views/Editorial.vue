@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    test {{test}}
+    {{COMING_SOON}}
   </div>
 </template>
 
@@ -9,8 +9,8 @@
 
 export default {
   computed: {
-    test(){
-      return this.$store.state.test;
+    COMING_SOON(){
+      return this.$store.state.COMING_SOON;
     }
   },
   name: 'Home',

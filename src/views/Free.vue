@@ -1,17 +1,20 @@
 <template>
   <div class="free">
-    free
+    <StackSection :data='dataArr'></StackSection>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-
+import StackSection from '@/components/sections/StackSection.vue'
 export default {
-  computed: {
-  },
-  name: 'Free',
-  components: {
-  }
+    computed:{
+      dataArr(){
+        return this.$store.state.creativeSectionsData
+      }
+    },
+    components: {
+      StackSection
+    },
 }
 </script>

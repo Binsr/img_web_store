@@ -2,7 +2,7 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    test: 'Teste',
+    COMING_SOON: 'Coming soon',
     homeSectionsData: [
       {msg: 'Beautiful and inspiring images, uploaded daily.',
        images: [{width: '250px', height: '200px'},
@@ -35,7 +35,33 @@ export default createStore({
                 {width: '120px', height: '200px'},
                 {width: '250px', height: '200px'}],
         seeMoreLink: '/free'
-      }]
+      }],
+      creativeSectionsData: 
+      {
+         images: [{width: '250px', height: '200px'},
+                  {width: '220px', height: '200px'},
+                  {width: '250px', height: '200px'},
+                  {width: '250px', height: '200px'},
+                  {width: '230px', height: '200px'},
+                  {width: '260px', height: '200px'},
+                  {width: '220px', height: '200px'},
+                  {width: '350px', height: '200px'},
+                  {width: '250px', height: '200px'},
+                  {width: '230px', height: '200px'},
+                  {width: '260px', height: '200px'},
+                  {width: '150px', height: '200px'},
+                  {width: '290px', height: '200px'},
+                  {width: '220px', height: '200px'},
+                  {width: '250px', height: '200px'},
+                  {width: '220px', height: '200px'},
+                  {width: '350px', height: '200px'},
+                  {width: '250px', height: '200px'},
+                  {width: '230px', height: '200px'},
+                  {width: '260px', height: '200px'},
+                  {width: '150px', height: '200px'},
+                  {width: '290px', height: '200px'},
+                ]
+      },
   },
   mutations: {
   },
