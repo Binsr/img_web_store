@@ -18,8 +18,7 @@ export default {
 
 <style>
 .searchWraper{
-    background-color:#e1e1e1;
-
+    background-color:#e3e3e3;
     width: 100%;
 }
 
@@ -28,7 +27,6 @@ export default {
     padding-bottom: 1rem;
     font-size: 1.5rem;
     font-weight: 500;
-
 }
 
 .searchBarWrapper{
@@ -47,8 +45,10 @@ export default {
     border: 1px solid black;
     width: 100%;
     height: 100%;
-
+    text-align: left;
+    padding-left: 8rem;
 }
+
 
 #SearchButton{
     all: unset;
@@ -58,6 +58,7 @@ export default {
     font-size: 1.3rem;
     font-weight: 500;
     left: 2rem;
+    line-height: 3rem;
 }
 
 
