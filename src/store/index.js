@@ -38,11 +38,11 @@ export default createStore({
       }],
       creativeSectionsData: 
       {
-         images: [{width: '250px', height: '200px'},
-                  {width: '250px', height: '200px'},
-                  {width: '250px', height: '200px'},
-                  {width: '250px', height: '200px'},
-                  {width: '250px', height: '200px'},
+         images: [{width: '350px', height: '200px'},
+                  {width: '150px', height: '200px'},
+                  {width: '420px', height: '200px'},
+                  {width: '150px', height: '200px'},
+                  {width: '170px', height: '200px'},
                   {width: '250px', height: '200px'},
                   {width: '250px', height: '200px'},
                   {width: '250px', height: '200px'},
