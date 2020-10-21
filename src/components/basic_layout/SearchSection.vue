@@ -3,7 +3,7 @@
         <h1>Find the perfect image for your next creative project</h1>
 
         <div class="searchBarWrapper">
-            <button id="SearchButton">Search</button>
+            <button id="SearchButton" style="background-image: url(searchIcon.svg);"></button>
             <input type="text" name="searchBar" id="searchBar">
         </div>
     </div>
@@ -49,17 +49,18 @@ export default {
     padding-left: 8rem;
 }
 
-
 #SearchButton{
     all: unset;
+    cursor: pointer;
     position: absolute;
-    box-sizing: border-box;
-    margin-left: auto;
-    font-size: 1.3rem;
-    font-weight: 500;
     left: 2rem;
-    line-height: 3rem;
+    box-sizing: border-box;
+    height: 2rem;
+    width: 2rem;
+    top: 0.5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 2rem;
 }
-
 
 </style>
