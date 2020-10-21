@@ -30,7 +30,7 @@ export default {
     }
     .stockStock{
         height: 20px !important;
-        display: inline-block !important;
+        display: block !important;
         line-height: 25px !important;
     }
     .svgWrap{
