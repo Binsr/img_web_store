@@ -1,8 +1,8 @@
 <template>
   <div class="snipetSectionWraper">
     <h4 class="snipetSectionMsg">{{ data.msg }}</h4>
-    <div style="display:flex">
-      <PreviewImg v-for="d in data.images" :key="d" :data='d'></PreviewImg>
+    <div class="wrapImages">
+      <PreviewImg v-for="d in data.images" :key="d" :img='d'></PreviewImg>
     </div>
     <router-link :to='data.seeMoreLink'><div class="seeMoreBtn">See more</div></router-link>
   </div>
@@ -18,6 +18,14 @@ export default {
 </script>
 
 <style>
+
+.wrapImages{
+  display:flex;
+  align-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
 .seeMoreBtn{
   border-radius: 50px;
   width: 150px;

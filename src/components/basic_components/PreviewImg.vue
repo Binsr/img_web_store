@@ -1,34 +1,34 @@
 <template>
 <div  class="contentContainer">
-  <div v-on:click="showBiggerImg" class="previewImgWraper" :style="{width:  data.width, height: data.height }">
+  <div v-on:click="showBiggerImg" class="previewImgWraper" :style="myStyles">
     
   </div>
-  <div class="popupInfo" :style="myStyles">
+  <!-- <div class="popupInfo" :style="myStyles">
     <div style="width: 60%;height:60%;background-color: white; margin: auto auto;margin-top: 20vh">
     <div v-on:click="hideBiggerImg" :style="closeStyle" class="closeClass">
       <div style="display:block; text-align: center">{{closeParagraph}}</div>
     </div>
     </div>
-  </div>
+  </div> -->
 </div>
 </template>
 
 <script>
 export default {
   name: 'PreviewImg',
-  props: ['data'],
+  props: ['img'],
   data(){
     return {
-      popupWidth: null,
-      popupHeight: null,
-      popupDisplay: "none",
+      popupWidth: this.img.width + "px",
+      popupHeight: this.img.height + "px",
+      popupDisplay: "block",
       closePara: ""
     }
   },
   methods: {
     showBiggerImg() {
-      this.popupWidth= "100";
-      this.popupHeight= "100";
+      this.popupWidth= "70vw";
+      this.popupHeight= "400px";
       this.popupDisplay= "block";
       this.closePara= "Close";
     },
@@ -42,8 +42,8 @@ export default {
   computed: {
     myStyles () {
       return {
-        height: `${this.popupWidth}vh`,
-        width: `${this.popupHeight}vw`,
+        height: `${this.popupHeight}`,
+        width: `${this.popupWidth}`,
         display: `${this.popupDisplay}`
       }
     },
@@ -76,6 +76,7 @@ export default {
     border-width: 1px;
     border-style: solid;
     border-color: black;
+    margin: 0 auto;
 }
 .popupInfo{
   position: fixed;
