@@ -85,13 +85,7 @@ export default {
   top: 0vh;
   left: 0vw;
 }
-/* .contentContainer:hover .popupInfo{
-  display: unset;
-  width: 60vw;
-  height: 60vh;
-  left: 20vw;
-  top: 20vh;
-} */
+
 
 
 </style>
