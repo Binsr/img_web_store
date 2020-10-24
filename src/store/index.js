@@ -6,7 +6,8 @@ export default createStore({
     focusedImage: {
       width: "100px",
       height: "100px",
-      activeSection: null
+      activeSection: null,
+      activeImgId: null
     },
     homeSectionsData: [
       {msg: 'Beautiful and inspiring images, uploaded daily.',

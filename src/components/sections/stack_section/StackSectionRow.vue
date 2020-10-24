@@ -18,24 +18,50 @@ export default {
       focusedImgWidth: '0px',
       focusedImgHeight: '0px',
       focusedImgId: 0,
-      focusedImgDisplay: 'none'
+      focusedImgDisplay: false
     }
   },
   methods: {
     showImgDetails(imgId) {
         console.log(imgId);
-      this.focusedImgWidth= "100%";
-      this.focusedImgHeight= "400px";
-      this.focusedImgId= imgId;
-      this.focusedImgDisplay= "block"
-      this.$store.state.focusedImage.activeSection= this.sectionId;
+        this.focusedImgWidth= "100%";
+        this.focusedImgHeight= "400px";
+        this.focusedImgId= imgId;
+        if(this.$store.state.focusedImage.activeSection == this.sectionId && this.$store.state.focusedImage.activeImgId == imgId){
+            this.focusedImgDisplay= !this.focusedImgDisplay;
+        }
+        else{
+            this.$store.state.focusedImage.activeSection= this.sectionId;
+            this.$store.state.focusedImage.activeImgId= imgId;
+            this.focusedImgDisplay= true;
+        }
+
+
+        // var activeSection=  this.$store.state.focusedImage.activeSection;
+        // var activeImg= this.$store.state.focusedImage.activeImgId;
+
+
+
+        // if(this.$store.state.focusedImage.activeImgId == imgId)
+        //     this.focusedImgDisplay= false;
+        // else if(this.$store.state.focusedImage.activeSection != this.sectionId)
+        //     this.focusedImgDisplay= false;
+        // else{
+        //     this.focusedImgDisplay= true;
+        // }
+    
+
     },
   },
   computed: {
     focusedImgDetails () {
-      var dis= "block";
-      if(this.sectionId != this.$store.state.focusedImage.activeSection)
-        dis= "none";
+      var dis= "none";
+
+      if(this.$store.state.focusedImage.activeSection == this.sectionId && this.$store.state.focusedImage.activeImgId == this.focusedImgId && this.focusedImgDisplay){
+          dis= "block";
+      }else{
+          dis="none";
+      }
 
       return {
         height: this.focusedImgHeight,
