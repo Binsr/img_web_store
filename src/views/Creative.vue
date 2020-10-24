@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import StackSection from '@/components/sections/StackSection.vue'
+import StackSection from '@/components/sections/stack_section/StackSection.vue'
 export default {
     computed:{
       dataArr(){

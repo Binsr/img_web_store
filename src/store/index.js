@@ -3,6 +3,11 @@ import { createStore } from 'vuex'
 export default createStore({
   state: {
     COMING_SOON: 'Coming soon',
+    focusedImage: {
+      width: "100px",
+      height: "100px",
+      activeSection: null
+    },
     homeSectionsData: [
       {msg: 'Beautiful and inspiring images, uploaded daily.',
        images: [{width: '200', height: '150'},

@@ -1,32 +1,26 @@
 <template>
 <div  class="contentContainer">
-  <div v-on:click="imClicked" class="previewImgWraper" :style="myStyles">
-    
-  </div>
-  <!-- <div class="popupInfo" :style="myStyles">
-    <div style="width: 60%;height:60%;background-color: white; margin: auto auto;margin-top: 20vh">
-    <div v-on:click="hideBiggerImg" :style="closeStyle" class="closeClass">
-      <div style="display:block; text-align: center">{{closeParagraph}}</div>
-    </div>
-    </div>
-  </div> -->
+  <div v-on:click="imClicked" class="previewImgWraper" :style="myStyles"></div>
 </div>
 </template>
 
 <script>
 export default {
   name: 'PreviewImg',
-  props: ['img'],
+  props: ['img','imgIndex'],
   data(){
     return {
       imgWidth: this.img.width + "px",
       imgHeight: this.img.height + "px",
+      imgId: this.imgIndex
     }
   },
   methods: {
     imClicked() {
       //alert("Img clicked");//signal i am clicked thats all i handle 😜
-      this.$emit("img-clicked");
+      this.$emit("img-clicked",this.imgId);
+      this.$store.state.focusedImage.width= this.imgWidth;
+      this.$store.state.focusedImage.height= this.imgHeight;
     },
   },
   computed: {
