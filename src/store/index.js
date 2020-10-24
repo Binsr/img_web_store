@@ -36,32 +36,32 @@ export default createStore({
                 {width: '200', height: '150'}],
         seeMoreLink: '/free'
       }],
+
+      //Ulaz 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
       creativeSectionsData: 
       {
-         images: [{width: '350', height: '200'},
+         images: [{width: '250', height: '200'},
                   {width: '150', height: '200'},
-                  {width: '420', height: '200'},
+                  {width: '220', height: '200'},
                   {width: '150', height: '200'},
-                  {width: '170', height: '200'},
-                  {width: '250', height: '200'},
-                  {width: '250', height: '200'},
-                  {width: '250', height: '200'},
-                  {width: '250', height: '200'},
-                  {width: '250', height: '200'},
-                  {width: '250', height: '200'},
-                  {width: '250', height: '200'},
-                  {width: '250', height: '200'},
-                  {width: '250', height: '200'},
-                  {width: '250', height: '200'},
-                  {width: '250', height: '200'},
-                  {width: '250', height: '200'},
-                  {width: '250', height: '200'},
-                  {width: '250', height: '200'},
-                  {width: '250', height: '200'},
-                  {width: '250', height: '200'},
-                  {width: '250', height: '200'},
+                  {width: '150', height: '200'},
+                  {width: '220', height: '200'},
+                 ]
+      },
+      //     🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+      //Izlaz🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+      creativeSectionsDataParsed:{
+        images: [[{width: '150', height: '200'},
+                  {width: '220', height: '200'},
+                  {width: '150', height: '200'}
+                 ],
+                 [{width: '150', height: '200'},
+                  {width: '220', height: '200'},
+                  {width: '150', height: '200'},
+                 ]
                 ]
       },
+      //     🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
       vectorsSectionsData: 
       {
          images: [{width: '150', height: '150'},

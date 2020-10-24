@@ -9,7 +9,7 @@ import StackSection from '@/components/sections/StackSection.vue'
 export default {
     computed:{
       dataArr(){
-        return this.$store.state.creativeSectionsData
+        return this.$store.state.creativeSectionsDataParsed
       }
     },
     components: {

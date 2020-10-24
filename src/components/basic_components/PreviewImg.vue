@@ -1,6 +1,6 @@
 <template>
 <div  class="contentContainer">
-  <div v-on:click="showBiggerImg" class="previewImgWraper" :style="myStyles">
+  <div v-on:click="imClicked" class="previewImgWraper" :style="myStyles">
     
   </div>
   <!-- <div class="popupInfo" :style="myStyles">
@@ -19,32 +19,21 @@ export default {
   props: ['img'],
   data(){
     return {
-      popupWidth: this.img.width + "px",
-      popupHeight: this.img.height + "px",
-      popupDisplay: "block",
-      closePara: ""
+      imgWidth: this.img.width + "px",
+      imgHeight: this.img.height + "px",
     }
   },
   methods: {
-    showBiggerImg() {
-      this.popupWidth= "70vw";
-      this.popupHeight= "400px";
-      this.popupDisplay= "block";
-      this.closePara= "Close";
+    imClicked() {
+      //alert("Img clicked");//signal i am clicked thats all i handle 😜
+      this.$emit("img-clicked");
     },
-    hideBiggerImg(){
-      this.pupupDisplay= "none";
-      this.popupWidth= "0";
-      this.popupHeight= "0";
-      this.closePara= "";
-    }
   },
   computed: {
     myStyles () {
       return {
-        height: `${this.popupHeight}`,
-        width: `${this.popupWidth}`,
-        display: `${this.popupDisplay}`
+        height: `${this.imgHeight}`,
+        width: `${this.imgWidth}`,
       }
     },
     closeStyle(){
