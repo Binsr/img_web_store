@@ -1,6 +1,6 @@
 <template>
   <div class="stackSectionWraper">
-    <div style="display: flex;" v-for="(row, index) in data.images" :key="row">
+    <div style="display: flex;width: 100%" v-for="(row, index) in data.images" :key="row">
         <StackSectionRow :images="data.images[index]" :sectionId="index"></StackSectionRow>
     </div>
   </div>

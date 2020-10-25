@@ -7,7 +7,8 @@ export default createStore({
       width: null,
       height: null,
       activeSection: null,
-      activeImgId: null
+      activeImgId: null,
+      title: null
     },
     homeSectionsData: [
       {msg: 'Beautiful and inspiring images, uploaded daily.',
@@ -57,20 +58,23 @@ export default createStore({
       //     🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
       //Izlaz🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
       creativeSectionsDataParsed:{
-        images: [[{width: '150', height: '200'},
-                  {width: '220', height: '200'},
-                  {width: '150', height: '200'},
-                  {width: '110', height: '200'}
+        images: [[{width: '150', height: '200', title: "Summer vine"},
+                  {width: '220', height: '200', title: "Running to the sea"},
+                  {width: '150', height: '200', title: "Trooper"},
+                  {width: '110', height: '200', title: "I tebe sam sit kafano"},
+                  {width: '260', height: '200', title: "Iiiii"}
                  ],
-                 [{width: '140', height: '200'},
-                  {width: '220', height: '200'},
-                  {width: '150', height: '200'},
-                  {width: '120', height: '200'}
+                 [{width: '140', height: '200', title: "Compiled succ"},
+                  {width: '220', height: '200', title: "App running"},
+                  {width: '150', height: '200', title: "Output"},
+                  {width: '120', height: '200', title: "Localhost"},
+                  {width: '230', height: '200', title: "Iiiii"}
                  ],
-                 [{width: '140', height: '200'},
-                 {width: '220', height: '200'},
-                 {width: '150', height: '200'},
-                 {width: '120', height: '200'}
+                 [{width: '140', height: '200', title: "Vec vec"},
+                  {width: '220', height: '200', title: "Selection"},
+                  {width: '150', height: '200', title: "Visual"},
+                  {width: '120', height: '200', title: "Explorer"},
+                  {width: '210', height: '200', title: "Iiiii"}
                  ]
                 ]
       },

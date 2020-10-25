@@ -10,8 +10,8 @@ export default {
   props: ['img','imgIndex'],
   data(){
     return {
-      imgWidth: this.img.width + "px",
-      imgHeight: this.img.height + "px",
+      imgWidth: this.img.width,
+      imgHeight: this.img.height,
       imgId: this.imgIndex
     }
   },
@@ -19,15 +19,16 @@ export default {
     imClicked() {
       //alert("Img clicked");//signal i am clicked thats all i handle 😜
       this.$emit("img-clicked",this.imgId);
-      this.$store.state.focusedImage.width= this.imgWidth;
-      this.$store.state.focusedImage.height= this.imgHeight;
+      this.$store.state.focusedImage.width= this.imgWidth * 1.5 + 'px';
+      this.$store.state.focusedImage.height= this.imgHeight * 1.5 + 'px';
+      this.$store.state.focusedImage.title= this.img.title;
     },
   },
   computed: {
     myStyles () {
       return {
-        height: `${this.imgHeight}`,
-        width: `${this.imgWidth}`,
+        height: `${this.imgHeight}` + 'px',
+        width: `${this.imgWidth}` + 'px',
       }
     },
     closeStyle(){
@@ -44,11 +45,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.closeClass{
-  width: 100%;
-  height: 20px;
-  background-color: red;
-}
+
 .contentContainer:hover{
   cursor: pointer;
 }
@@ -61,14 +58,7 @@ export default {
     border-color: black;
     margin: 0 auto;
 }
-.popupInfo{
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.712);
-  z-index: 5;
-  margin: auto auto;
-  top: 0vh;
-  left: 0vw;
-}
+
 
 
 

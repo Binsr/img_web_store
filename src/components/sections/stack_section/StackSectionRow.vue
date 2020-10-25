@@ -1,9 +1,9 @@
 <template>
-    <div style="display:flex; flex-direction: column">
-        <div style="display:flex">
+    <div style="display:flex; flex-direction: column; width: 100%">
+        <div style="display:flex; width: 100%">
             <PreviewImg @img-clicked="this.showImgDetails" v-for="(img,index) in this.images" :key="img" :imgIndex="index" :img="img">awd</PreviewImg>
         </div>
-        <div :style="focusedImgBox"><div :style="focusedImageStyles"></div></div>
+        <div class="focusedImgBox" :style="focusedImgBox"><div :style="focusedImageStyles"></div> <div class="focusedImgTitle">{{focusedImageTitle}}</div></div>
     </div>
 </template>
 
@@ -18,14 +18,14 @@ export default {
       focusedImgWidth: '0px',
       focusedImgHeight: '0px',
       focusedImgId: 0,
-      focusedImgDisplay: false
+      focusedImgDisplay: false,
     }
   },
   methods: {
     showImgDetails(imgId) {
         console.log(imgId);
         this.focusedImgWidth= "100%";
-        this.focusedImgHeight= "400px";
+        this.focusedImgHeight= "600px";
         this.focusedImgId= imgId;
         if(this.$store.state.focusedImage.activeSection == this.sectionId && this.$store.state.focusedImage.activeImgId == imgId){
             this.focusedImgDisplay= !this.focusedImgDisplay;
@@ -43,7 +43,7 @@ export default {
       var activeSection= this.$store.state.focusedImage.activeSection;
       var activeImgId= this.$store.state.focusedImage.activeImgId; 
       if( (activeSection == this.sectionId) && (activeImgId == this.focusedImgId) && (this.focusedImgDisplay) ){
-          dis= "block";
+          dis= "flex";
       }else{
           dis="none";
       }
@@ -70,6 +70,9 @@ export default {
             marginLeft: '40px',
             marginTop: '40px'
         }
+    },
+    focusedImageTitle(){
+      return this.$store.state.focusedImage.title;
     }
   }
 }
@@ -77,5 +80,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.focusedImgTitle{
+  font-size: 18px;
+  margin: 40px 0 0 20px;
+}
 </style>
