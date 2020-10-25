@@ -3,7 +3,7 @@
         <div style="display:flex">
             <PreviewImg @img-clicked="this.showImgDetails" v-for="(img,index) in this.images" :key="img" :imgIndex="index" :img="img">awd</PreviewImg>
         </div>
-        <div :style="focusedImgDetails"><div :style="aaa"></div></div>
+        <div :style="focusedImgBox"><div :style="focusedImageStyles"></div></div>
     </div>
 </template>
 
@@ -38,7 +38,7 @@ export default {
     },
   },
   computed: {
-    focusedImgDetails () {
+    focusedImgBox () {
       var dis= "none";
       var activeSection= this.$store.state.focusedImage.activeSection;
       var activeImgId= this.$store.state.focusedImage.activeImgId; 
@@ -60,13 +60,15 @@ export default {
     focusedImageId(){
         return this.focusedImgId;
     },
-    aaa(){
+    focusedImageStyles(){
         return{
             width: this.$store.state.focusedImage.width,
             height: this.$store.state.focusedImage.height,
             borderWidth: '1px',
             borderStyle: 'solid',
             borderColor: 'black',
+            marginLeft: '40px',
+            marginTop: '40px'
         }
     }
   }
