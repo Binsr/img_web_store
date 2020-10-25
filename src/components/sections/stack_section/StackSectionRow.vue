@@ -35,29 +35,14 @@ export default {
             this.$store.state.focusedImage.activeImgId= imgId;
             this.focusedImgDisplay= true;
         }
-
-
-        // var activeSection=  this.$store.state.focusedImage.activeSection;
-        // var activeImg= this.$store.state.focusedImage.activeImgId;
-
-
-
-        // if(this.$store.state.focusedImage.activeImgId == imgId)
-        //     this.focusedImgDisplay= false;
-        // else if(this.$store.state.focusedImage.activeSection != this.sectionId)
-        //     this.focusedImgDisplay= false;
-        // else{
-        //     this.focusedImgDisplay= true;
-        // }
-    
-
     },
   },
   computed: {
     focusedImgDetails () {
       var dis= "none";
-
-      if(this.$store.state.focusedImage.activeSection == this.sectionId && this.$store.state.focusedImage.activeImgId == this.focusedImgId && this.focusedImgDisplay){
+      var activeSection= this.$store.state.focusedImage.activeSection;
+      var activeImgId= this.$store.state.focusedImage.activeImgId; 
+      if( (activeSection == this.sectionId) && (activeImgId == this.focusedImgId) && (this.focusedImgDisplay) ){
           dis= "block";
       }else{
           dis="none";
@@ -66,7 +51,9 @@ export default {
       return {
         height: this.focusedImgHeight,
         width: this.focusedImgWidth,
-        backgroundColor: "green",
+        borderWidth: '1px',
+        borderStyle: 'solid',
+        borderColor: 'black',
         display: dis
       }
     },
@@ -77,7 +64,9 @@ export default {
         return{
             width: this.$store.state.focusedImage.width,
             height: this.$store.state.focusedImage.height,
-            backgroundColor: "black"
+            borderWidth: '1px',
+            borderStyle: 'solid',
+            borderColor: 'black',
         }
     }
   }

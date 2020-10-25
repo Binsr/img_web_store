@@ -4,8 +4,8 @@ export default createStore({
   state: {
     COMING_SOON: 'Coming soon',
     focusedImage: {
-      width: "100px",
-      height: "100px",
+      width: null,
+      height: null,
       activeSection: null,
       activeImgId: null
     },
@@ -59,11 +59,18 @@ export default createStore({
       creativeSectionsDataParsed:{
         images: [[{width: '150', height: '200'},
                   {width: '220', height: '200'},
-                  {width: '150', height: '200'}
+                  {width: '150', height: '200'},
+                  {width: '110', height: '200'}
                  ],
-                 [{width: '150', height: '200'},
+                 [{width: '140', height: '200'},
                   {width: '220', height: '200'},
                   {width: '150', height: '200'},
+                  {width: '120', height: '200'}
+                 ],
+                 [{width: '140', height: '200'},
+                 {width: '220', height: '200'},
+                 {width: '150', height: '200'},
+                 {width: '120', height: '200'}
                  ]
                 ]
       },
