@@ -1,6 +1,6 @@
 <template>
 <div  class="contentContainer">
-  <div v-on:click="imClicked" class="previewImgWraper" :style="myStyles">
+  <div v-on:click="imClicked" :style="myStyles">
     <img class="imgStyle" :src="this.imgSrc"/>
   </div>
 </div>
@@ -58,11 +58,7 @@ export default {
   width: min-content;
   margin: 20px auto;
 }
-.previewImgWraper{
-    border-width: 1px;
-    border-style: solid;
-    border-color: black;
-}
+
 .imgStyle{
     max-width: 100%;
     max-height: 100%;

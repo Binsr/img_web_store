@@ -70,9 +70,6 @@ export default {
         return{
             width: this.$store.state.focusedImage.width,
             height: this.$store.state.focusedImage.height,
-            borderWidth: '1px',
-            borderStyle: 'solid',
-            borderColor: 'black',
             marginLeft: '40px',
             marginTop: '40px'
         }
@@ -89,6 +86,7 @@ export default {
 .focusedImgTitle{
   font-size: 18px;
   margin: 40px 0 0 20px;
+  color: white;
 }
 .focusedImgBox{
   background-color: #251d20;
