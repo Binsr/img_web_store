@@ -3,7 +3,10 @@
         <div style="display:flex; width: 100%">
             <PreviewImg @img-clicked="this.showImgDetails" v-for="(img,index) in this.images" :key="img" :imgIndex="index" :img="img">awd</PreviewImg>
         </div>
-        <div class="focusedImgBox" :style="focusedImgBox"><div :style="focusedImageStyles"></div> <div class="focusedImgTitle">{{focusedImageTitle}}</div></div>
+        <div class="focusedImgBox" :style="focusedImgBox">
+          <div :style="focusedImageStyles"></div>
+          <div class="focusedImgTitle">{{focusedImageTitle}}</div>
+        </div>
     </div>
 </template>
 
@@ -83,5 +86,8 @@ export default {
 .focusedImgTitle{
   font-size: 18px;
   margin: 40px 0 0 20px;
+}
+.focusedImgBox{
+  background-color: #251d20;
 }
 </style>
