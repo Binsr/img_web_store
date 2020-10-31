@@ -1,6 +1,8 @@
 <template>
 <div  class="contentContainer">
-  <div v-on:click="imClicked" class="previewImgWraper" :style="myStyles"></div>
+  <div v-on:click="imClicked" class="previewImgWraper" :style="myStyles">
+    <img class="imgStyle" :src="this.imgSrc"/>
+  </div>
 </div>
 </template>
 
@@ -12,7 +14,8 @@ export default {
     return {
       imgWidth: this.img.width,
       imgHeight: this.img.height,
-      imgId: this.imgIndex
+      imgId: this.imgIndex,
+      imgSrc: this.img.src
     }
   },
   methods: {
@@ -22,6 +25,7 @@ export default {
       this.$store.state.focusedImage.width= this.imgWidth * 1.5 + 'px';
       this.$store.state.focusedImage.height= this.imgHeight * 1.5 + 'px';
       this.$store.state.focusedImage.title= this.img.title;
+      this.$store.state.focusedImage.src= this.img.src;
     },
   },
   computed: {
@@ -50,16 +54,23 @@ export default {
   cursor: pointer;
 }
 .contentContainer{
+  display: flex;
+  width: min-content;
   margin: 20px auto;
 }
 .previewImgWraper{
     border-width: 1px;
     border-style: solid;
     border-color: black;
-    margin: 0 auto;
 }
-
-
-
+.imgStyle{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+.previewImgWraper{
+  display: flex;
+  width: min-content;
+}
 
 </style>

@@ -3,8 +3,8 @@
         <div style="display:flex; width: 100%">
             <PreviewImg @img-clicked="this.showImgDetails" v-for="(img,index) in this.images" :key="img" :imgIndex="index" :img="img">awd</PreviewImg>
         </div>
-        <div class="focusedImgBox" :style="focusedImgBox">
-          <div :style="focusedImageStyles"></div>
+        <div class="focusedImgBox" :style="focusedImgBox"><!--  //On bi u sebi takodje trebao da ima preview image -->
+          <div :style="focusedImageStyles"><img style="height: 100%" :src="focusedImgSrc"/></div>
           <div class="focusedImgTitle">{{focusedImageTitle}}</div>
         </div>
     </div>
@@ -59,6 +59,9 @@ export default {
         borderColor: 'black',
         display: dis
       }
+    },
+    focusedImgSrc(){
+      return this.$store.state.focusedImage.src;
     },
     focusedImageId(){
         return this.focusedImgId;

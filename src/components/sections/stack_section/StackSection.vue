@@ -26,8 +26,6 @@ export default {
     text-align: left;
     margin: 0 auto;
 }
-.stackSectionWraper .previewImgWraper{
-    margin: 20px 20px;
-}
+
 
 </style>
