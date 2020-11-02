@@ -31,14 +31,6 @@ export default {
         width: `${this.imgWidth}` + 'px',
       }
     },
-    closeStyle(){
-      return{
-        display: `${this.popupDisplay}`
-      }
-    },
-    closeParagraph(){
-      return this.closePara;
-    }
   }
 }
 </script>

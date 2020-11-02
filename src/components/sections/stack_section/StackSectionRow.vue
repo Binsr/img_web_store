@@ -42,10 +42,10 @@ export default {
         
     },
     setFocusedImageData(imgId){
-      this.$store.state.focusedImage.width= this.images[imgId].width * 1.5  + 'px';
+      this.$store.state.focusedImage.width= this.images[imgId].width * 1.5  + 'px'; //This should be img from store directly!!!! TODO ZAKUKOLJENO PREVISE
       this.$store.state.focusedImage.height= this.images[imgId].height * 1.5 + 'px';
       this.$store.state.focusedImage.title= this.images[imgId].title;
-      this.$store.state.focusedImage.src= this.images[imgId].src;//This should be img from store directly!!!! TODO
+      this.$store.state.focusedImage.src= this.images[imgId].src;
     }
   },
   computed: {
