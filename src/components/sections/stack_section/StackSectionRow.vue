@@ -42,7 +42,6 @@ export default {
         
     },
     setFocusedImageData(imgId){
-      console.log("CALLLLLEEEEEED")
       this.$store.state.focusedImage.width= this.images[imgId].width * 1.5  + 'px';
       this.$store.state.focusedImage.height= this.images[imgId].height * 1.5 + 'px';
       this.$store.state.focusedImage.title= this.images[imgId].title;
