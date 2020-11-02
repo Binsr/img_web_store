@@ -3,7 +3,7 @@
         <div style="display:flex; width: 100%">
             <PreviewImg @clicked-signal="this.showImgDetails" v-for="(img,index) in this.images" :key="img" :imgIndex="index" :img="img">awd</PreviewImg>
         </div>
-        <div class="focusedImgBox" :style="focusedImgBox"><!--  //On bi u sebi takodje trebao da ima preview image -->
+        <div class="focusedImgBox" :style="focusedImgBox"><!--On bi u sebi takodje trebao da ima preview image takodje trebao bi imati signal koji hvata(SHOW/HIDE) da se hendluje nekim signalom-->
           <div :style="focusedImageStyles"><img style="height: 100%" :src="focusedImgSrc"/></div>
           <div class="focusedImgTitle">{{focusedImageTitle}}</div>
         </div>
@@ -25,11 +25,11 @@ export default {
     }
   },
   methods: {
-    showImgDetails(imgId) {
-        console.log(imgId);
-        this.setFocusedImageData(imgId);
-        this.focusedImgWidth= "100%";
-        this.focusedImgHeight= "600px";
+    showImgDetails(payload) {
+        var imgId= payload.imgId;
+        this.setFocusedImageData(imgId);//Ovo TODO
+        this.focusedImgWidth= "100%";//I ovo zbunjuje TODO
+        this.focusedImgHeight= "600px";//A dve su razlicite stvari jedna je slika iz Store drugo je kontejner koji je prikazuje to moram bolje  TODO
         this.focusedImgId= imgId;
         if(this.$store.state.focusedImage.activeSection == this.sectionId && this.$store.state.focusedImage.activeImgId == imgId){
             this.focusedImgDisplay= !this.focusedImgDisplay;
@@ -38,8 +38,7 @@ export default {
             this.$store.state.focusedImage.activeSection= this.sectionId;
             this.$store.state.focusedImage.activeImgId= imgId;
             this.focusedImgDisplay= true;
-        }
-        
+        }    
     },
     setFocusedImageData(imgId){
       this.$store.state.focusedImage.width= this.images[imgId].width * 1.5  + 'px'; //This should be img from store directly!!!! TODO ZAKUKOLJENO PREVISE

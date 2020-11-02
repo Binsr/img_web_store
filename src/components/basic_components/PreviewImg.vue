@@ -15,13 +15,16 @@ export default {
       imgWidth: this.img.width,
       imgHeight: this.img.height,
       imgId: this.imgIndex,
-      imgSrc: this.img.src
+      imgSrc: this.img.src,
+      payload: { //Maybe later this click event will send more information, it should be all in same structure
+        imgId: this.imgIndex
+      }
     }
   },
   methods: {
     sendClickedSignal() {
       //alert("Img clicked");//signal i am clicked thats all i handle 😜
-      this.$emit("clicked-signal",this.imgId);
+      this.$emit("clicked-signal",this.payload);
     },
   },
   computed: {
