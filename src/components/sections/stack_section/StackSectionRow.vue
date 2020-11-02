@@ -1,7 +1,7 @@
 <template>
     <div style="display:flex; flex-direction: column; width: 100%">
         <div style="display:flex; width: 100%">
-            <PreviewImg @img-clicked="this.showImgDetails" v-for="(img,index) in this.images" :key="img" :imgIndex="index" :img="img">awd</PreviewImg>
+            <PreviewImg @clicked-signal="this.showImgDetails" v-for="(img,index) in this.images" :key="img" :imgIndex="index" :img="img">awd</PreviewImg>
         </div>
         <div class="focusedImgBox" :style="focusedImgBox"><!--  //On bi u sebi takodje trebao da ima preview image -->
           <div :style="focusedImageStyles"><img style="height: 100%" :src="focusedImgSrc"/></div>
@@ -27,6 +27,7 @@ export default {
   methods: {
     showImgDetails(imgId) {
         console.log(imgId);
+        this.setFocusedImageData(imgId);
         this.focusedImgWidth= "100%";
         this.focusedImgHeight= "600px";
         this.focusedImgId= imgId;
@@ -38,7 +39,15 @@ export default {
             this.$store.state.focusedImage.activeImgId= imgId;
             this.focusedImgDisplay= true;
         }
+        
     },
+    setFocusedImageData(imgId){
+      console.log("CALLLLLEEEEEED")
+      this.$store.state.focusedImage.width= this.images[imgId].width * 1.5  + 'px';
+      this.$store.state.focusedImage.height= this.images[imgId].height * 1.5 + 'px';
+      this.$store.state.focusedImage.title= this.images[imgId].title;
+      this.$store.state.focusedImage.src= this.images[imgId].src;//This should be img from store directly!!!! TODO
+    }
   },
   computed: {
     focusedImgBox () {

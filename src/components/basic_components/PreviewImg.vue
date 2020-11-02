@@ -1,6 +1,6 @@
 <template>
 <div  class="contentContainer">
-  <div v-on:click="imClicked" :style="myStyles">
+  <div v-on:click="sendClickedSignal" :style="myStyles">
     <img class="imgStyle" :src="this.imgSrc"/>
   </div>
 </div>
@@ -19,13 +19,9 @@ export default {
     }
   },
   methods: {
-    imClicked() {
+    sendClickedSignal() {
       //alert("Img clicked");//signal i am clicked thats all i handle 😜
-      this.$emit("img-clicked",this.imgId);
-      this.$store.state.focusedImage.width= this.imgWidth * 1.5 + 'px';
-      this.$store.state.focusedImage.height= this.imgHeight * 1.5 + 'px';
-      this.$store.state.focusedImage.title= this.img.title;
-      this.$store.state.focusedImage.src= this.img.src;
+      this.$emit("clicked-signal",this.imgId);
     },
   },
   computed: {
