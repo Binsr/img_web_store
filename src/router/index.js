@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home  from '../views/SearchBar/Home.vue'
 import SearchBarView from '../views/SearchBarView.vue'
+import LoginView from '../views/LoginView.vue'
 
 const routes = [
   {
@@ -38,6 +39,20 @@ const routes = [
       }
     ]
   },
+  {
+  path: '/login',
+    name: 'LoginView',
+    component: LoginView,
+    children: [
+      {
+        // A will be rendered in the second <router-view>
+        // when /your-sidebar-url/a is matched
+        path: '',
+        name: 'Home',
+        component: Home
+      }
+    ]
+  }
 ]
 
 const router = createRouter({
