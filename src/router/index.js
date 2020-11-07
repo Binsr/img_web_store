@@ -12,9 +12,8 @@ const routes = [
       {
         // A will be rendered in the second <router-view>
         // when /your-sidebar-url/a is matched
-        path: '',
-        name: 'Home',
-        component: Home
+        path: '/',
+        component: () => import(/* webpackChunkName: "about" */ '../views/SearchBar/Home.vue')
       },
       {
         // A will be rendered in the second <router-view>
