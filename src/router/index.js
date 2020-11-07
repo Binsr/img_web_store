@@ -2,7 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home  from '../views/SearchBar/Home.vue'
 import SearchBarView from '../views/SearchBarView.vue'
 import LoginView from '../views/LoginView.vue'
-
+import ShoppingCartView from '../views/ShoppingCartView.vue'
+ShoppingCartView
 const routes = [
   {
     path: '/',
@@ -51,7 +52,21 @@ const routes = [
         component: Home
       }
     ]
-  }
+  },
+  {
+    path: '/shopping-cart-view',
+      name: 'ShoppingCartView',
+      component: ShoppingCartView ,
+      children: [
+        {
+          // A will be rendered in the second <router-view>
+          // when /your-sidebar-url/a is matched
+          path: '',
+          name: 'Home',
+          component: Home
+        }
+      ]
+    }
 ]
 
 const router = createRouter({

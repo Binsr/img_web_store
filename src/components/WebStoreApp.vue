@@ -1,7 +1,10 @@
 <template>
   <div style="width: 100%">
     <HeadTapeMenu class="headingTape"></HeadTapeMenu>
-    <div class="loginButtonContainer"><router-link to="/login"><span>LOGIN</span></router-link></div>
+    <div class="loginButtonContainer">
+      <router-link style="margin-right: 10px" to="/login"><span>LOGIN</span></router-link>
+      <router-link to="shopping-cart-view"><span>SHOPPING CART</span></router-link>
+    </div>
     <!-- <router-link to="/"><span>HOME</span></router-link> -->
     <router-view/>
   </div>
@@ -20,7 +23,7 @@
 .loginButtonContainer{
   margin: 10px 10px 0 auto;
   display:flex;
-  width:min-content;
+  width:max-content;
 }
 
 </style>
