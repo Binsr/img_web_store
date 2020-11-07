@@ -1,16 +1,17 @@
 <template>
   <div>
-    <HeadTapeMenu class="headingTape"></HeadTapeMenu>
+    <SearchSection></SearchSection>
+    <MainMenu></MainMenu>
+    <router-view name="Home"/>
     <div class="centerPanel"><router-view/></div>
-    <FooterComponent></FooterComponent>
   </div>
 </template>
 <script>
-    import FooterComponent from '@/components/basic_layout/FooterComponent.vue';
-    import HeadTapeMenu from '@/components/basic_layout/HeadTapeMenu.vue'
+    import MainMenu from '@/components/basic_layout/MainMenu.vue';
+    import SearchSection from '@/components/basic_layout/SearchSection.vue';
     export default {
         components: {
-            FooterComponent, HeadTapeMenu
+            MainMenu,SearchSection
         },
         name: 'WebStoreApp',
     }

@@ -1,44 +1,43 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
+import Home  from '../views/SearchBar/Home.vue'
+import SearchBarView from '../views/SearchBarView.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'SearchBarView',
+    component: SearchBarView,
+    children: [
+      {
+        // A will be rendered in the second <router-view>
+        // when /your-sidebar-url/a is matched
+        path: '',
+        name: 'Home',
+        component: Home
+      },
+      {
+        // A will be rendered in the second <router-view>
+        // when /your-sidebar-url/a is matched
+        path: 'editorial',
+        component: () => import(/* webpackChunkName: "about" */ '../views/SearchBar/Editorial.vue')
+      },
+      {
+        path: '/creative',
+        name: 'Creative',
+        component: () => import('../views/SearchBar/Creative.vue')
+      },
+      {
+        path: '/vectors',
+        name: 'Vectors',
+        component: () => import('../views/SearchBar/Vectors.vue')
+      },
+      {
+        path: '/free',
+        name: 'Free',
+        component: () => import('../views/SearchBar/Free.vue')
+      }
+    ]
   },
-  {
-    path: '/editorial',
-    name: 'Editorial',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Editorial.vue')
-  },
-  {
-    path: '/creative',
-    name: 'Creative',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Creative.vue')
-  },
-  {
-    path: '/vectors',
-    name: 'Vectors',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Vectors.vue')
-  },
-  {
-    path: '/free',
-    name: 'Free',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Free.vue')
-  }
 ]
 
 const router = createRouter({
