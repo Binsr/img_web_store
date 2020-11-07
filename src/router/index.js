@@ -14,13 +14,39 @@ const routes = [
         // A will be rendered in the second <router-view>
         // when /your-sidebar-url/a is matched
         path: '/',
-        component: () => import(/* webpackChunkName: "about" */ '../views/SearchBar/Home.vue')
+        component: () => import(/* webpackChunkName: "about" */ '../views/SearchBar/Home.vue') //OVO POTENCIJALNO POPAKOVATI U STORE I OVDE INPORT URADITI ZBOG PREGLEDNOSTI
       },
       {
         // A will be rendered in the second <router-view>
         // when /your-sidebar-url/a is matched
         path: 'editorial',
-        component: () => import(/* webpackChunkName: "about" */ '../views/SearchBar/Editorial.vue')
+        component: () => import(/* webpackChunkName: "about" */ '../views/SearchBar/Editorial.vue'),
+        children: [
+          {
+            path: 'all',
+            component: () => {
+              return import(/* webpackChunkName: "about" */ '../views/SearchBar/EditorialSubViews/All.vue')
+            },
+          },
+          {
+            path: 'entertainment',
+            component: () => {
+              return import(/* webpackChunkName: "about" */ '../views/SearchBar/EditorialSubViews/Entertainment.vue')
+            },
+          },
+          {
+            path: 'news',
+            component: () => {
+              return import(/* webpackChunkName: "about" */ '../views/SearchBar/EditorialSubViews/News.vue')
+            },
+          },
+          {
+            path: 'sports',
+            component: () => {
+              return import(/* webpackChunkName: "about" */ '../views/SearchBar/EditorialSubViews/Sports.vue')
+            },
+          }
+        ]
       },
       {
         path: '/creative',
