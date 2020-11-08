@@ -1,8 +1,6 @@
 <template>
-  <div style="width: 100%">
-    <div class="heading">
-      <HeadTapeMenu class="headingTape"></HeadTapeMenu>
-    </div>
+  <div>
+    <HeadTapeMenu></HeadTapeMenu>
     <router-view/>
   </div>
 </template>

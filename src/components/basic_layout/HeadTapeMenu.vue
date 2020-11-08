@@ -1,11 +1,9 @@
  <template>
     <div class="headingTapeWraper">
-        <div class="burgerMenuContainer"><router-link class="routerLink" to="/"><span>HOME</span></router-link></div>
-        <Logo style="width: 100px"></Logo>
-        <div class="loginButtonContainer">
-            <router-link class="routerLink" style="margin-right: 10px" to="/login"><span>LOGIN</span></router-link>
-            <router-link class="routerLink" to="shopping-cart-view"><span>SHOPPING CART</span></router-link>
-        </div>
+        <div class="burger-area centerText"><router-link class="routerLink" to="/"><p>HOME</p></router-link></div>
+        <div class="logo-area"><Logo></Logo></div>
+        <div class="login-area centerText"><router-link class="routerLink" style="margin-right: 10px" to="/login"><p>LOGIN</p></router-link></div>
+        <div class="chart-area centerText"><router-link class="routerLink" to="/shopping-cart-view"><p>SHOPPING CART</p></router-link></div>
     </div>
 </template>
 
@@ -18,20 +16,29 @@ export default {
 </script>
 
 <style>
+
+.centerText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.centerText p{
+    height: 13px;
+}
+
 .headingTapeWraper{
     background-color:white;
     height: min-content; 
     width: 100%;
     display: flex;
 }
-.loginButtonContainer{
-  display:flex;
-  width:max-content;
+.logo-area{
+    
 }
-.burgerMenuContainer a{
+.burger-area a{
   border-width: 0 !important;
 }
-.burgerMenuContainer{
+.burger-area{
   display:flex;
   width:max-content;
 }
