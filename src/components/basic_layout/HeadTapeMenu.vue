@@ -17,6 +17,26 @@ export default {
 
 <style>
 
+.headingTapeWraper{
+    background-color:white;
+    height: min-content; 
+    width: 100%;
+    display: flex;
+}
+
+.burger-area{
+    float: left;
+} 
+.logo-area{
+    margin: 0 auto;
+}
+.login-area{
+    float: right
+}
+.chart-area{
+    float: right;
+}
+
 .centerText{
     display: flex;
     align-items: center;
@@ -24,16 +44,6 @@ export default {
 }
 .centerText p{
     height: 13px;
-}
-
-.headingTapeWraper{
-    background-color:white;
-    height: min-content; 
-    width: 100%;
-    display: flex;
-}
-.logo-area{
-    
 }
 .burger-area a{
   border-width: 0 !important;
