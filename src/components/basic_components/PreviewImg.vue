@@ -1,5 +1,7 @@
 <template>
 <div  class="contentContainer">
+  <div class="img-addToChart"></div>
+  <div class="img-similarImages"></div>
   <div v-on:click="sendClickedSignal" :style="myStyles">
     <img class="imgStyle" :src="this.imgSrc"/>
   </div>
@@ -41,11 +43,30 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+.contentContainer:hover .img-addToChart{
+  width: 70px;
+  height: 30px;
+  margin-left:auto;
+  background-color: gray;
+  position: absolute;
+  bottom: 0;
+}
+.contentContainer:hover .img-similarImages{
+  width: 70px;
+  height: 30px;
+  margin-left:auto;
+  background-color: gray;
+  position: absolute;
+  right: 0;
+}
+
+
 .contentContainer:hover{
   cursor: pointer;
 }
 .contentContainer{
   display: flex;
+  position: relative;
   width: min-content;
   margin: 20px auto;
 }
