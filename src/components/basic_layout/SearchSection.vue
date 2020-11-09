@@ -25,16 +25,16 @@ export default {
 .searchWraper > h1{
     padding-top: 2rem;
     padding-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 500;
 }
 
 .searchBarWrapper{
-    width: 50%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 3rem;
-    height: 3rem;
+    padding-bottom: 2rem;
+    height: 2.5rem;
     position: relative;
 }
 
@@ -53,14 +53,14 @@ export default {
     all: unset;
     cursor: pointer;
     position: absolute;
-    left: 2rem;
+    left: 1.2rem;
     box-sizing: border-box;
-    height: 2rem;
-    width: 2rem;
+    height: 1.4rem;
+    width: 1.4rem;
     top: 0.5rem;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 2rem;
+    background-size: 1.4rem;
 }
 
 </style>

@@ -1,9 +1,9 @@
  <template>
     <div class="headingTapeWraper">
-        <div class="burger-area centerText"><router-link class="routerLink" to="/"><p>HOME</p></router-link></div>
+        <div class="burger-area router-link"><router-link class="routerLink" to="/"><p>BURGER</p></router-link></div>
         <div class="logo-area"><Logo></Logo></div>
-        <div class="login-area centerText"><router-link class="routerLink" style="margin-right: 10px" to="/login"><p>LOGIN</p></router-link></div>
-        <div class="chart-area centerText"><router-link class="routerLink" to="/shopping-cart-view"><p>SHOPPING CART</p></router-link></div>
+        <div class="login-area router-link"><router-link class="routerLink" style="margin-right: 10px" to="/login"><p>LOGIN</p></router-link></div>
+        <div class="chart-area router-link"><router-link class="routerLink" to="/shopping-cart-view"><p>SHOPPING CART</p></router-link></div>
     </div>
 </template>
 
@@ -22,6 +22,7 @@ export default {
     height: min-content; 
     width: 100%;
     display: flex;
+    padding: 10px 0;
 }
 
 .burger-area{
@@ -29,6 +30,7 @@ export default {
 } 
 .logo-area{
     margin: 0 auto;
+    padding-left: 80px;
 }
 .login-area{
     float: right
@@ -37,12 +39,18 @@ export default {
     float: right;
 }
 
-.centerText{
+.router-link{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.centerText p{
+.router-link a{
+    text-decoration: none;
+    color: #000 !important;
+    border: 0px !important;
+}
+
+.router-link p{
     height: 13px;
 }
 .burger-area a{

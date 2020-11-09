@@ -56,7 +56,7 @@ export default {
   margin: auto;
   background-color:black; 
   height: 200px; 
-  width: 80vw;
+  width: 100vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 50px 100px 50px;

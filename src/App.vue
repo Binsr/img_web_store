@@ -38,20 +38,16 @@ body{
   color: #2c3e50;
   padding: 0 !important;
   margin: 0 !important;
+  height: 100vh;
 }
 
-#nav {}
+#nav {
+  height: 100vh;
+}
 
 #nav a {
   font-weight: bold;
   color: #2c3e50;
-}
-.centerPanel{
-    width: 80vw;
-    border: 1px solid black;
-    margin: 10px auto;
-    height: auto !important;
-    
 }
 
 #nav a.router-link-exact-active {
