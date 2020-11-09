@@ -16,3 +16,13 @@ export default {
     },
 }
 </script>
+
+<style>
+
+.contentContainer{ /* TODO - Remove this its just for images on home to be visible*/
+  border-width: 1px;
+  border-style: solid;
+  border-style: solid;
+}
+
+</style>

@@ -12,7 +12,7 @@ export default {
   props: ['img','imgIndex'],
   data(){
     return {
-      imgWidth: this.img.width,
+      imgWidth: this.img.width, 
       imgHeight: this.img.height,
       imgId: this.imgIndex,
       imgSrc: this.img.src,
