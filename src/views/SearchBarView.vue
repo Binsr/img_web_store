@@ -8,7 +8,7 @@
   </div>
 </template>
 <script>
-    import MainMenu from '@/components/basic_layout/MainMenu.vue';
+    import MainMenu from '@/components/basic_components/menu_components/MainMenu.vue';
     import SearchSection from '@/components/basic_layout/SearchSection.vue';
     export default {
         components: {

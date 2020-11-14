@@ -1,6 +1,7 @@
  <template>
     <div class="headingTapeWraper">
-        <div class="burger-area router-link"><router-link class="routerLink" to="/"><p>BURGER</p></router-link></div>
+       <!-- <div class="burger-area router-link"><router-link class="routerLink" to="/"><p>BURGER</p></router-link></div> -->
+        <BurgerMenu></BurgerMenu>
         <div class="logo-area"><Logo></Logo></div>
         <div class="login-area router-link"><router-link class="routerLink" style="margin-right: 10px" to="/login"><p>LOGIN</p></router-link></div>
         <div class="chart-area router-link"><router-link class="routerLink" to="/shopping-cart-view"><p>SHOPPING CART</p></router-link></div>
@@ -9,8 +10,9 @@
 
 <script>
 import Logo from '@/components/basic_components/Logo.vue';
+import BurgerMenu from '@/components/basic_components/menu_components/BurgerMenu.vue';
 export default {
-    components: {Logo},
+    components: {Logo, BurgerMenu},
     name: 'HeadTapeMenu'
 }
 </script>

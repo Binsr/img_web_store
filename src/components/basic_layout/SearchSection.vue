@@ -1,6 +1,6 @@
  <template>
     <div class="searchWraper">
-        <h1>Find the perfect image for your next creative project</h1>
+        <h1>{{$store.state.msg.searchBarTitle}}</h1>
 
         <div class="searchBarWrapper">
             <button id="SearchButton" style="background-image: url(searchIcon.svg);"></button>

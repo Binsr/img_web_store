@@ -3,16 +3,16 @@
   <div class="main-menu-container">
     <div class="main-menu__tabs-container">
         <div class="main-menu__tab">
-            <router-link to="/editorial/"><span class="main-menu-text">All</span></router-link>
+            <router-link to="/editorial/"><span class="main-menu-text">{{$store.state.msg.pages.editorial.page1.toUpperCase()}}</span></router-link>
         </div>
         <div class="main-menu__tab"> 
-            <router-link to="/editorial/news"><span class="main-menu-text">News</span></router-link>
+            <router-link to="/editorial/news"><span class="main-menu-text">{{$store.state.msg.pages.editorial.page2.toUpperCase()}}</span></router-link>
         </div>
         <div class="main-menu__tab">
-            <router-link to="/editorial/sports"><span class="main-menu-text">Sports</span></router-link>
+            <router-link to="/editorial/sports"><span class="main-menu-text">{{$store.state.msg.pages.editorial.page3.toUpperCase()}}</span></router-link>
         </div>
         <div class="main-menu__tab">
-            <router-link to="/editorial/entertainment"><span class="main-menu-text">Entertainment</span></router-link>
+            <router-link to="/editorial/entertainment"><span class="main-menu-text">{{$store.state.msg.pages.editorial.page4.toUpperCase()}}</span></router-link>
         </div>
     </div>
     <div><router-view/></div>

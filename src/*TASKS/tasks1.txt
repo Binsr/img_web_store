@@ -2,10 +2,22 @@
 It editorial is activ when there is /editorial in link all is active when there is /editorial/all in link but if links are set this way then
 when editorial is opened all wont be automaticly opened. Shitty bug.
 
-2. Vectors hover vs Normal img hover
-
 3. Zasto Home ima horizontalni scroll proveriti, odnosno sve stranice imaju mozda (Footer*)
 
 4. Preview img has some size limit to be shown
 
-5. Split store data 
+5. Split store data -- DONE
+
+6. Make burger menu -- WORKING -- 40%
+
+7. When Free images are clicked app stucks
+
+8. Main menu should not be hardcoded
+
+9. Burger menu should not be hardcoded
+
+10. components/basic/img/ or components/menus/burger menu just rename these dirs
+
+11. Extract app messages in some json like you extracted images and import it in store
+
+12. router-link to="CONSTANT" move this to store
