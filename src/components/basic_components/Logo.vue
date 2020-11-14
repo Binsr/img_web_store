@@ -1,11 +1,9 @@
 <template>
     <div class="logo-wraper">
-        <router-link to="/">
             <div class="logoWraper">
                 <img style="border-radius: 50%;width: 18px;" src="logoS.svg"/> 
                 <span class="stockStock">tock<span style="font-weight: 400">Serbia</span></span>
             </div>
-        </router-link>
     </div>
 </template>
 
@@ -16,6 +14,9 @@ export default {
 </script>
 
 <style>
+    .logo-wraper :hover{
+        cursor: pointer;
+    }
     .logoWraper{
         display: flex;
         justify-content: center;

@@ -10,7 +10,7 @@ import StackSection from '@/components/sections/stack_section/StackSection.vue'
 export default {
     computed:{
       dataArr(){
-        return this.$store.state.creativeSectionsData
+        return this.$store.state.freeImagesParsed
       }
     },
     components: {

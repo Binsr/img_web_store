@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="stock_s_files/logoS.svg">
+    <title>stock_s</title>
+  <link href="stock_s_files/0.js" rel="prefetch"><link href="http://localhost:8080/js/1.js" rel="prefetch"><link href="stock_s_files/2.js" rel="prefetch"><link href="http://localhost:8080/js/3.js" rel="prefetch"><link href="http://localhost:8080/js/about.js" rel="prefetch"><link href="stock_s_files/app.js" rel="preload" as="script"><link href="stock_s_files/chunk-vendors.js" rel="preload" as="script"><style type="text/css">
+.logo-wraper :hover{
+        cursor: pointer;
+}
+.logoWraper{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        border-radius: 50%;
+}
+.stockStock{
+        height: 20px !important;
+        display: block !important;
+        line-height: 25px !important;
+}
+.logo-wraper a{
+        text-decoration: none !important;
+        color: #000 !important;
+        border-width: 0px !important;
+}
+.logo-wraper{
+        display: flex;
+        width: -webkit-max-content;
+        width: -moz-max-content;
+        width: max-content;
+}
+</style><style type="text/css">
+.burger-menu-icon, .linkWrap :hover{
+        cursor: pointer;
+}
+.linkWrap{
+        display: flex;
+        margin: 10px auto;
+}
+.burger-menu-icon{
+        width: 30px;
+        height: 30px;
+}
+.burger-menu-panel{
+       width: 200px; 
+       height: 240px; 
+       border-width: 1px;
+       border-style: solid;
+       border-collapse: black;
+       background-color: rgb(247, 247, 247);
+       position: absolute;
+       left: 20px;
+       top: 30px;
+       display: flex;
+       flex-direction: column;
+}
+</style><style type="text/css">
+.headingTapeWraper{
+    background-color:white;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content; 
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+}
+.burger-area{
+    float: left;
+}
+.logo-area{
+    margin: 0 auto;
+    padding-left: 80px;
+}
+.login-area{
+    float: right
+}
+.chart-area{
+    float: right;
+}
+.router-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.router-link a{
+    text-decoration: none;
+    color: #000 !important;
+    border: 0px !important;
+}
+.router-link p{
+    height: 13px;
+}
+.burger-area a{
+  border-width: 0 !important;
+}
+.burger-area{
+  display:flex;
+  width:-webkit-max-content;
+  width:-moz-max-content;
+  width:max-content;
+}
+.routerLink{
+  font-size: 13px;
+  text-decoration: none;
+}
+
+</style><style type="text/css">
+.footerWraper[data-v-3582fe44]{
+  color: white;
+  margin: auto;
+  background-color:black; 
+  height: 200px; 
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 50px 100px 50px;
+  grid-template-areas: 
+  "top top top top top"
+  "content company legal support something"
+  "left right right right right";
+}
+.top[data-v-3582fe44]{
+    grid-area: top;
+}
+.content[data-v-3582fe44]{
+    grid-area: content;
+}
+.company[data-v-3582fe44]{
+    grid-area: company;
+}
+.legal[data-v-3582fe44]{
+    grid-area: legal;
+}
+.support[data-v-3582fe44]{
+    grid-area: support;
+}
+.something[data-v-3582fe44]{
+    grid-area: something;
+}
+
+
+</style><style type="text/css">
+.footer-component{ /*COMPONENT SHOULD BE POSITIONED IN ITS PARENT ALWAYS */
+}
+
+</style><style type="text/css">
+*{
+  padding: 0;
+  margin: 0;
+}
+html{
+  padding: 0;
+}
+body{
+  padding: 0;
+  margin: 0;
+}
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 100vh;
+}
+#nav {
+  height: 100vh;
+}
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
+</style><style type="text/css">
+.contentContainer:hover .img-addToChart[data-v-32ba3440]{
+  width: 70px;
+  height: 30px;
+  margin-left:auto;
+  background-color: gray;
+  position: absolute;
+  bottom: 0;
+}
+.contentContainer:hover .img-similarImages[data-v-32ba3440]{
+  width: 70px;
+  height: 30px;
+  margin-left:auto;
+  background-color: gray;
+  position: absolute;
+  right: 0;
+}
+.contentContainer[data-v-32ba3440]:hover{
+  cursor: pointer;
+}
+.contentContainer[data-v-32ba3440]{
+  display: flex;
+  position: relative;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  margin: 20px auto;
+}
+.imgStyle[data-v-32ba3440]{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+.previewImgWraper[data-v-32ba3440]{
+  display: flex;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+</style><style type="text/css">
+.wrapImages{
+  display:flex;
+  align-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.seeMoreBtn{
+  border-radius: 50px;
+  width: 150px;
+  height: 30px;
+  line-height: 32px;
+  margin: 10px auto;
+  text-align: center;
+  background-color: red;
+  color: white;
+}
+.snipetSectionMsg{
+  text-align: left;
+  margin-top: 20px;
+}
+.snipetSectionWraper a{
+  text-decoration: none !important;
+}
+.snipetSectionWraper{
+  width: 90%;
+  text-align: left;
+  margin: 0 auto;
+}
+</style><style type="text/css">
+.contentContainer{ /* TODO - Remove this its just for images on home to be visible*/
+  border-width: 1px;
+  border-style: solid;
+  border-style: solid;
+}
+
+</style><style type="text/css">
+.activeTab{
+  border-color: black;
+}
+.main-menu-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.main-menu__tabs-container{
+  display: flex;
+  margin: auto;
+}
+.main-menu__tab{
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  box-sizing: border-box;
+  margin: 0 3vw 0 3vw;
+  color: #000 !important;
+}
+.main-menu__tab a{
+  font-weight: 400;
+  justify-content: center;
+  display: flex;
+  margin: auto;
+  text-align: center;
+  padding: 4px;
+  text-decoration: none;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: white;
+}
+.main-menu-text{
+    color: #000;
+    font-weight: 300;
+    font-size: 14px;
+}
+.router-link-active{
+  border-color: red  !important;
+  border-width: 0 0 2px 0 !important;
+  border-style: solid;
+}
+.router-link-active span{
+  color: white important;
+}
+.main-menu__tab:hover{
+  opacity: 0.9;
+}
+</style><style type="text/css">
+.searchWraper{
+    background-color:#e3e3e3;
+    width: 100%;
+}
+.searchWraper > h1{
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.searchBarWrapper{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2rem;
+    height: 2.5rem;
+    position: relative;
+}
+#searchBar{
+    all: unset;
+    box-sizing: border-box;
+    background-color: white;
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    padding-left: 8rem;
+}
+#SearchButton{
+    all: unset;
+    cursor: pointer;
+    position: absolute;
+    left: 1.2rem;
+    box-sizing: border-box;
+    height: 1.4rem;
+    width: 1.4rem;
+    top: 0.5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1.4rem;
+}
+
+</style><style type="text/css">
+.centerPanel{
+    width: 80vw;
+    border: 1px solid black;
+    margin: 10px auto;
+    height: auto !important;
+}
+
+</style><style type="text/css">
+.container{
+    width: 40vw;
+    border: 1px solid black;
+    margin: 10px auto;
+}
+.textHolder{
+    margin: auto;
+    display: flex;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+}
+.input{
+    width: 300px;
+    height: 40px;
+    background-color: gray;
+    margin: 10px auto 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+</style><style type="text/css">
+.container{
+    width: 40vw;
+    border: 1px solid black;
+    margin: 10px auto;
+}
+.textHolder{
+    margin: auto;
+    display: flex;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+}
+.input{
+    width: 300px;
+    height: 40px;
+    background-color: gray;
+    margin: 10px auto 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+</style><script charset="utf-8" src="stock_s_files/0.js"></script><script charset="utf-8" src="stock_s_files/2.js"></script><style type="text/css">
+.focusedImgTitle[data-v-01dacc6a]{
+  font-size: 18px;
+  margin: 40px 0 0 20px;
+  color: white;
+}
+.focusedImgBox[data-v-01dacc6a]{
+  background-color: #251d20;
+}
+</style><style type="text/css">
+.stackSectionWraper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 98%;
+    text-align: left;
+    margin: 0 auto;
+}
+
+
+</style></head>
+  <body>
+    <noscript>
+      <strong>We're sorry but stock_s doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app" data-v-app=""><div id="nav"><div class="headingTapeWraper"><!-- <div class="burger-area router-link"><router-link class="routerLink" to="/"><p>BURGER</p></router-link></div> --><!-- TODO ova komponenta ne bi trebala da bude hardcodovana --><div class="burger-menu-icon"><img style="width: 30px;" src="stock_s_files/burgerMenu.png"></div><div class="burger-menu-panel" style="display: none;"><div class="linkWrap"><span class="main-menu-text"><div class="logo-wraper"><div class="logoWraper"><img style="border-radius: 50%; width: 18px;" src="stock_s_files/logoS.svg"><span class="stockStock">tock<span style="font-weight: 400;">Serbia</span></span></div></div></span></div><div class="linkWrap"><a href="http://localhost:8080/" class="router-link-active"><span class="main-menu-text">HOME</span></a></div><div class="linkWrap"><span class="main-menu-text">CUSTOM IMAGES</span></div><div class="linkWrap"><span class="main-menu-text">PRICING</span></div><div class="linkWrap"><span class="main-menu-text">FAQ</span></div><div class="linkWrap"><span class="main-menu-text">CONTACT US</span></div></div><div class="logo-area"><a href="http://localhost:8080/" class="router-link-active"><div class="logo-wraper"><div class="logoWraper"><img style="border-radius: 50%; width: 18px;" src="stock_s_files/logoS.svg"><span class="stockStock">tock<span style="font-weight: 400;">Serbia</span></span></div></div></a></div><div class="login-area router-link"><a href="http://localhost:8080/login" class="routerLink" style="margin-right: 10px;"><p>login/SINGUP</p></a></div><div class="chart-area router-link"><a href="http://localhost:8080/shopping-cart-view" class="routerLink"><p>Shopping Chart</p></a></div></div><div class="footerWraper footer-component" data-v-3582fe44=""><div class="top" data-v-3582fe44=""></div><div class="content" data-v-3582fe44=""> CONTENT <br data-v-3582fe44=""> Crative <br data-v-3582fe44=""> Editorial<br data-v-3582fe44=""> Free<br data-v-3582fe44=""></div><div class="company" data-v-3582fe44=""> COMPANY <br data-v-3582fe44=""> Crative <br data-v-3582fe44=""> Editorial<br data-v-3582fe44=""> Free<br data-v-3582fe44=""></div><div class="legal" data-v-3582fe44=""> LEGAL <br data-v-3582fe44=""> Crative <br data-v-3582fe44=""> Editorial<br data-v-3582fe44=""> Free<br data-v-3582fe44=""></div><div class="support" data-v-3582fe44=""> SUPPORT <br data-v-3582fe44=""> Crative <br data-v-3582fe44=""> Editorial<br data-v-3582fe44=""> Free<br data-v-3582fe44=""></div><div class="something" data-v-3582fe44=""> SOMETHING <br data-v-3582fe44=""> Crative <br data-v-3582fe44=""> Editorial<br data-v-3582fe44=""> Free<br data-v-3582fe44=""></div><div class="left" data-v-3582fe44=""></div><div class="right" data-v-3582fe44=""></div></div></div></div>
+    <!-- built files will be auto injected -->
+  <script type="text/javascript" src="stock_s_files/chunk-vendors.js"></script><script type="text/javascript" src="stock_s_files/app.js"></script>
+
+</body></html>

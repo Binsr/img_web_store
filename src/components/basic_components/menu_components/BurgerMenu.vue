@@ -1,6 +1,9 @@
  <template> <!-- TODO ova komponenta ne bi trebala da bude hardcodovana -->
   <div class="burger-menu-icon" v-on:click="burgerMenuClicked"><img style="width: 30px" src="@/assets/burgerMenu.png"/> </div>
   <div class="burger-menu-panel" :style="panelStyle">
+        <div class="linkWrap">
+            <span class="main-menu-text"><Logo/></span><div class="cancleBtn" v-on:click="burgerMenuClicked">x</div>
+        </div>
         <div class="linkWrap" v-on:click="burgerMenuClicked">
             <router-link to="/"><span class="main-menu-text">HOME</span></router-link>
         </div>
@@ -20,8 +23,10 @@
 </template>
 
 <script>
+import Logo from '@/components/basic_components/Logo.vue';
 export default {
-    components: {},
+    
+    components: {Logo},
     name: 'BurgerMenu',
     data(){
         return{
@@ -50,6 +55,12 @@ export default {
 </script>
 
 <style>
+    .cancleBtn{
+        margin-left: 20px;
+    }
+    .burger-menu-icon, .linkWrap :hover{
+        cursor: pointer;
+    }
     .linkWrap{
         display: flex;
         margin: 10px auto;
@@ -59,7 +70,9 @@ export default {
         height: 30px;
     }
     .burger-menu-panel{
-       width: 100px; height: 200px; 
+       z-index: 3;
+       width: 200px; 
+       height: 240px; 
        border-width: 1px;
        border-style: solid;
        border-collapse: black;
