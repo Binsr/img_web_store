@@ -5,7 +5,16 @@
             <router-link to="/"><span class="main-menu-text">HOME</span></router-link>
         </div>
         <div class="linkWrap" v-on:click="burgerMenuClicked">
-            <router-link to="/creative"><span class="main-menu-text">{{$store.state.msg.pages.creative.fullName.toUpperCase()}}</span></router-link>
+           <span class="main-menu-text">CUSTOM IMAGES</span>
+        </div>
+        <div class="linkWrap" v-on:click="burgerMenuClicked">
+           <span class="main-menu-text">PRICING</span>
+        </div>
+        <div class="linkWrap" v-on:click="burgerMenuClicked">
+           <span class="main-menu-text">FAQ</span>
+        </div>
+        <div class="linkWrap" v-on:click="burgerMenuClicked">
+           <span class="main-menu-text">CONTACT US</span>
         </div>
   </div>
 </template>
