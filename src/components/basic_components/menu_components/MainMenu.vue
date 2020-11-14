@@ -2,16 +2,16 @@
   <div class="main-menu-container">
     <div class="main-menu__tabs-container">
         <div class="main-menu__tab">
-            <router-link to="/creative"><span class="main-menu-text"> {{$store.state.msg.pages.creative.toUpperCase()}} </span></router-link>
+            <router-link to="/creative"><span class="main-menu-text"> {{$store.state.msg.pages.creative.fullName.toUpperCase()}} </span></router-link>
         </div>
         <div class="main-menu__tab"> 
             <router-link to="/editorial"><span class="main-menu-text">{{$store.state.msg.pages.editorial.fullName.toUpperCase()}}</span></router-link>
         </div>
         <div class="main-menu__tab">
-            <router-link to="/vectors"><span class="main-menu-text">{{$store.state.msg.pages.vectors.toUpperCase()}}</span></router-link>
+            <router-link to="/vectors"><span class="main-menu-text">{{$store.state.msg.pages.vectors.fullName.toUpperCase()}}</span></router-link>
         </div>
         <div class="main-menu__tab">
-            <router-link to="/free"><span class="main-menu-text">{{$store.state.msg.pages.free.toUpperCase()}}</span></router-link>
+            <router-link to="/free"><span class="main-menu-text">{{$store.state.msg.pages.free.fullName.toUpperCase()}}</span></router-link>
         </div>
     </div>
   </div>

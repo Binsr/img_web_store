@@ -1,16 +1,23 @@
 export default{
     pages:{
-        creative: 'creative',
+        creative: {
+                    fullName: 'creative'
+        },
         editorial:{
                     fullName: 'editorial',
                     page1: 'All',
                     page2: 'News',
                     page3: 'Sports',
                     page4: 'Entertainment'
-                },
-        vectors: 'vectors',
-        free: 'free'
+        },
+        vectors:  {
+                    fullName: 'vectors'
+        },
+        free:     {
+                    fullName: 'free'
+        },
     },
-    searchBarTitle: "Find the perfect image for your next creative project"
-
+    searchBarTitle: "Find the perfect image for your next creative project",
+    login: "login/SINGUP",
+    chart: "Shopping Chart"
 }
