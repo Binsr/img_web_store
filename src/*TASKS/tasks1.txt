@@ -1,0 +1,11 @@
+1. When Editorial is clicked All tab should be active, bug is that it stays active when other tab is clicked
+It editorial is activ when there is /editorial in link all is active when there is /editorial/all in link but if links are set this way then
+when editorial is opened all wont be automaticly opened. Shitty bug.
+
+2. Vectors hover vs Normal img hover
+
+3. Zasto Home ima horizontalni scroll proveriti, odnosno sve stranice imaju mozda (Footer*)
+
+4. Preview img has some size limit to be shown
+
+5. Split store data 
