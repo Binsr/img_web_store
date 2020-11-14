@@ -1,4 +1,4 @@
-<template>
+<template> <!-- Smilsi bolje ime za ovu komponentu -->
 <div  class="contentContainer">
   <div class="img-addToChart"></div>
   <div class="img-similarImages"></div>

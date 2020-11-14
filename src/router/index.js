@@ -23,7 +23,7 @@ const routes = [
         component: () => import(/* webpackChunkName: "about" */ '../views/SearchBar/Editorial.vue'),
         children: [
           {
-            path: 'all',
+            path: '',
             component: () => {
               return import(/* webpackChunkName: "about" */ '../views/SearchBar/EditorialSubViews/All.vue')
             },

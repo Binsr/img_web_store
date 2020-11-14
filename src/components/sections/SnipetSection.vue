@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import PreviewImg from '@/components/basic_components/PreviewImg.vue'
+import PreviewImg from '@/components/basic_components/img_components/PreviewImg.vue'
 export default {
   name: 'SnipetSection',
   props: ['data'],

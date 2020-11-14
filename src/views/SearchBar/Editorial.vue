@@ -3,7 +3,7 @@
   <div class="main-menu-container">
     <div class="main-menu__tabs-container">
         <div class="main-menu__tab">
-            <router-link to="/editorial/all"><span class="main-menu-text">All</span></router-link>
+            <router-link to="/editorial/"><span class="main-menu-text">All</span></router-link>
         </div>
         <div class="main-menu__tab"> 
             <router-link to="/editorial/news"><span class="main-menu-text">News</span></router-link>
