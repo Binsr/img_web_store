@@ -2,7 +2,7 @@
   <div class="burger-menu-icon" v-on:click="burgerMenuClicked"><img style="width: 30px" src="@/assets/burgerMenu.png"/> </div>
   <div class="burger-menu-panel" :style="panelStyle">
         <div class="linkWrap">
-            <span class="main-menu-text"><Logo/></span><div class="cancleBtn" v-on:click="burgerMenuClicked">x</div>
+            <span class="main-menu-text"><Logo/></span><div class="cancleBtn" v-on:click="burgerMenuClicked">x</div> <!-- !!!!!!!!!!! DINAMICKI MORA OVAJ MENUU !!!!!!! -->
         </div>
         <div class="linkWrap" v-on:click="burgerMenuClicked">
             <router-link to="/"><span class="main-menu-text">{{$store.state.msg.pages.home}}</span></router-link>

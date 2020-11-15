@@ -43,5 +43,5 @@ export default{
 }
 
 function createLink(msg){
-    return './' + (msg.replace(/\s/g, '-')).toLowerCase();
+    return '/' + (msg.replace(/\s/g, '-')).toLowerCase();
 }
