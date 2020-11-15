@@ -19,7 +19,7 @@ export default{
         home: "Home",
         customImg: "Custom Images",
         contact: "Contact us",
-        pricing: "Privcing",
+        pricing: "Pricing",
         faq: "FAQ"
     },
     searchBarTitle: "Find the perfect image for your next creative project",

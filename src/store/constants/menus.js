@@ -24,19 +24,43 @@ export default{
         pages:[
             {
                 message: messages.pages.editorial.page1,
-                link: '/editorial/' //Treba ovo sve dinamicki
+                link: createLink(messages.pages.editorial.fullName)
             },
             {
                 message: messages.pages.editorial.page2,
-                link: '/editorial/news'
+                link: createLink(messages.pages.editorial.fullName) + createLink(messages.pages.editorial.page2)
             },
             {
                 message: messages.pages.editorial.page3,
-                link: '/editorial/sports'
+                link: createLink(messages.pages.editorial.fullName) + createLink(messages.pages.editorial.page3)
             },
             {
                 message: messages.pages.free.fullName,
-                link: '/editorial/entertainment'
+                link: createLink(messages.pages.editorial.fullName) + createLink(messages.pages.editorial.page4)
+            },
+        ]
+    },
+    burgerMenu:{
+        pages:[
+            {
+                message: messages.pages.home,
+                link: '/' //Treba ovo sve dinamicki
+            },
+            {
+                message: messages.pages.customImg,
+                link: createLink(messages.pages.customImg)
+            },
+            {
+                message: messages.pages.pricing,
+                link: createLink(messages.pages.pricing)
+            },
+            {
+                message: messages.pages.faq,
+                link: createLink(messages.pages.faq)
+            },
+            {
+                message: messages.pages.contact,
+                link: createLink(messages.pages.contact)
             },
         ]
     }

@@ -2,22 +2,10 @@
   <div class="burger-menu-icon" v-on:click="burgerMenuClicked"><img style="width: 30px" src="@/assets/burgerMenu.png"/> </div>
   <div class="burger-menu-panel" :style="panelStyle">
         <div class="linkWrap">
-            <span class="main-menu-text"><Logo/></span><div class="cancleBtn" v-on:click="burgerMenuClicked">x</div> <!-- !!!!!!!!!!! DINAMICKI MORA OVAJ MENUU !!!!!!! -->
+            <span class="main-menu-text"><Logo/></span><div class="cancleBtn" v-on:click="burgerMenuClicked">x</div>
         </div>
-        <div class="linkWrap" v-on:click="burgerMenuClicked">
-            <router-link to="/"><span class="main-menu-text">{{$store.state.msg.pages.home}}</span></router-link>
-        </div>
-        <div class="linkWrap" v-on:click="burgerMenuClicked">
-           <span class="main-menu-text">{{$store.state.msg.pages.customImg}}</span>
-        </div>
-        <div class="linkWrap" v-on:click="burgerMenuClicked">
-           <span class="main-menu-text">{{$store.state.msg.pages.pricing}}</span>
-        </div>
-        <div class="linkWrap" v-on:click="burgerMenuClicked">
-           <span class="main-menu-text">{{$store.state.msg.pages.faq}}</span>
-        </div>
-        <div class="linkWrap" v-on:click="burgerMenuClicked">
-           <span class="main-menu-text">{{$store.state.msg.pages.contact}}</span>
+        <div class="linkWrap" v-for="tab in tabs" :key="tab" v-on:click="burgerMenuClicked">
+            <router-link  :to="tab.link"><span class="main-menu-text">{{tab.message}}</span></router-link>
         </div>
   </div>
 </template>
@@ -28,6 +16,7 @@ export default {
     
     components: {Logo},
     name: 'BurgerMenu',
+    props: ['tabs'],
     data(){
         return{
             panelDisplayed: false,
