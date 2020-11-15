@@ -1,13 +1,15 @@
- <template> <!-- TODO ova komponenta ne bi trebala da bude hardcodovana -->
-  <div class="burger-menu-icon" v-on:click="burgerMenuClicked"><img style="width: 30px" src="@/assets/burgerMenu.png"/> </div>
-  <div class="burger-menu-panel" :style="panelStyle">
+ <template>
+    <div class="burger-menu-icon" v-on:click="burgerMenuClicked">
+      <img style="width: 30px" src="@/assets/burgerMenu.png"/>
+    </div>
+    <div class="burger-menu-panel" :style="panelStyle">
         <div class="linkWrap">
             <span class="main-menu-text"><Logo/></span><div class="cancleBtn" v-on:click="burgerMenuClicked">x</div>
         </div>
         <div class="linkWrap" v-for="tab in tabs" :key="tab" v-on:click="burgerMenuClicked">
             <router-link  :to="tab.link"><span class="main-menu-text">{{tab.message}}</span></router-link>
         </div>
-  </div>
+    </div>
 </template>
 
 <script>

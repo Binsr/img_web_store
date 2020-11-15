@@ -11,39 +11,35 @@ const routes = [
     component: SearchBarView,
     children: [
       {
-        // A will be rendered in the second <router-view>
-        // when /your-sidebar-url/a is matched
         path: '/',
-        component: () => import(/* webpackChunkName: "about" */ '../views/SearchBar/Home.vue') //OVO POTENCIJALNO POPAKOVATI U STORE I OVDE INPORT URADITI ZBOG PREGLEDNOSTI
+        component: () => import( '../views/SearchBar/Home.vue')
       },
       {
-        // A will be rendered in the second <router-view>
-        // when /your-sidebar-url/a is matched
         path: 'editorial',
-        component: () => import(/* webpackChunkName: "about" */ '../views/SearchBar/Editorial.vue'),
+        component: () => import( '../views/SearchBar/Editorial.vue'),
         children: [
           {
             path: '',
             component: () => {
-              return import(/* webpackChunkName: "about" */ '../views/SearchBar/EditorialSubViews/All.vue')
+              return import( '../views/SearchBar/EditorialSubViews/All.vue')
             },
           },
           {
             path: 'entertainment',
             component: () => {
-              return import(/* webpackChunkName: "about" */ '../views/SearchBar/EditorialSubViews/Entertainment.vue')
+              return import( '../views/SearchBar/EditorialSubViews/Entertainment.vue')
             },
           },
           {
             path: 'news',
             component: () => {
-              return import(/* webpackChunkName: "about" */ '../views/SearchBar/EditorialSubViews/News.vue')
+              return import( '../views/SearchBar/EditorialSubViews/News.vue')
             },
           },
           {
             path: 'sports',
             component: () => {
-              return import(/* webpackChunkName: "about" */ '../views/SearchBar/EditorialSubViews/Sports.vue')
+              return import( '../views/SearchBar/EditorialSubViews/Sports.vue')
             },
           }
         ]
@@ -71,8 +67,6 @@ const routes = [
     component: LoginView,
     children: [
       {
-        // A will be rendered in the second <router-view>
-        // when /your-sidebar-url/a is matched
         path: '',
         name: 'Home',
         component: Home
@@ -85,8 +79,6 @@ const routes = [
       component: ShoppingCartView ,
       children: [
         {
-          // A will be rendered in the second <router-view>
-          // when /your-sidebar-url/a is matched
           path: '',
           name: 'Home',
           component: Home
