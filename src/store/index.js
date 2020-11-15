@@ -3,7 +3,7 @@ import vectorImages from './images/vectorImages.js'
 import homeImages from './images/homeImages.js'
 import creativeImages from './images/creativeImages.js'
 import freeImages from './images/freeImages.js'
-import routesConst from './constants/routes.js'
+import menuConst from './constants/menus.js'
 import messages from './constants/messages.js'
 
 export default createStore({
@@ -21,7 +21,7 @@ export default createStore({
     homeSectionsData: homeImages.parsedImages,
     creativeSectionsDataParsed: creativeImages.parsedImages,
     freeImagesParsed: freeImages.parsedImages, 
-    routerLinks: routesConst,
+    menus: menuConst,
     msg: messages
   },
   mutations: {

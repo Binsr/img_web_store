@@ -5,19 +5,19 @@
             <span class="main-menu-text"><Logo/></span><div class="cancleBtn" v-on:click="burgerMenuClicked">x</div>
         </div>
         <div class="linkWrap" v-on:click="burgerMenuClicked">
-            <router-link to="/"><span class="main-menu-text">HOME</span></router-link>
+            <router-link to="/"><span class="main-menu-text">{{$store.state.msg.pages.home}}</span></router-link>
         </div>
         <div class="linkWrap" v-on:click="burgerMenuClicked">
-           <span class="main-menu-text">CUSTOM IMAGES</span>
+           <span class="main-menu-text">{{$store.state.msg.pages.customImg}}</span>
         </div>
         <div class="linkWrap" v-on:click="burgerMenuClicked">
-           <span class="main-menu-text">PRICING</span>
+           <span class="main-menu-text">{{$store.state.msg.pages.pricing}}</span>
         </div>
         <div class="linkWrap" v-on:click="burgerMenuClicked">
-           <span class="main-menu-text">FAQ</span>
+           <span class="main-menu-text">{{$store.state.msg.pages.faq}}</span>
         </div>
         <div class="linkWrap" v-on:click="burgerMenuClicked">
-           <span class="main-menu-text">CONTACT US</span>
+           <span class="main-menu-text">{{$store.state.msg.pages.contact}}</span>
         </div>
   </div>
 </template>

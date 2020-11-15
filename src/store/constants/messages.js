@@ -6,7 +6,7 @@ export default{
         editorial:{
                     fullName: 'editorial',
                     page1: 'All',
-                    page2: 'News',
+                    page2: 'News',//OVO NEMA SMISLA PREPRAVI
                     page3: 'Sports',
                     page4: 'Entertainment'
         },
@@ -16,6 +16,11 @@ export default{
         free:     {
                     fullName: 'free'
         },
+        home: "Home",
+        customImg: "Custom Images",
+        contact: "Contact us",
+        pricing: "Privcing",
+        faq: "FAQ"
     },
     searchBarTitle: "Find the perfect image for your next creative project",
     login: "login/SINGUP",

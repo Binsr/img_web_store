@@ -1,17 +1,8 @@
- <template> <!-- TODO ova komponenta ne bi trebala da bude hardcodovana -->
+ <template>
   <div class="main-menu-container">
     <div class="main-menu__tabs-container">
-        <div class="main-menu__tab">
-            <router-link to="/creative"><span class="main-menu-text"> {{$store.state.msg.pages.creative.fullName.toUpperCase()}} </span></router-link>
-        </div>
-        <div class="main-menu__tab"> 
-            <router-link to="/editorial"><span class="main-menu-text">{{$store.state.msg.pages.editorial.fullName.toUpperCase()}}</span></router-link>
-        </div>
-        <div class="main-menu__tab">
-            <router-link to="/vectors"><span class="main-menu-text">{{$store.state.msg.pages.vectors.fullName.toUpperCase()}}</span></router-link>
-        </div>
-        <div class="main-menu__tab">
-            <router-link to="/free"><span class="main-menu-text">{{$store.state.msg.pages.free.fullName.toUpperCase()}}</span></router-link>
+        <div v-for="tab in data.pages" :key="tab" class="main-menu__tab">
+            <router-link :to="tab.link"><span class="main-menu-text"> {{tab.message.toUpperCase()}} </span></router-link>
         </div>
     </div>
   </div>
@@ -20,7 +11,8 @@
 <script>
 export default {
     components: {},
-    name: 'MainMenu'
+    name: 'MainMenu',
+    props: ['data'],
 }
 </script>
 
