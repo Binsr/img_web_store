@@ -1,7 +1,7 @@
  <template>
   <div class="menu-container">
     <div class="menu__tabs-container">
-        <div v-for="tab in dataC.pages" :key="tab" class="menu__tab">
+        <div v-for="tab in tabs" :key="tab" class="menu__tab">
             <router-link :to="tab.link"><span class="menu-text"> {{tab.message.toUpperCase()}} </span></router-link>
         </div>
     </div>
@@ -12,7 +12,7 @@
 export default {
     components: {},
     name: 'Menu',
-    props: ['data'],
+    props: ['tabs'],
     computed:{
       dataC(){
         return this.data;

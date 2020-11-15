@@ -1,7 +1,7 @@
 <template>
   <div>
     <SearchSection></SearchSection>
-    <Menu :data="data"></Menu>
+    <Menu :tabs="data"></Menu>
     <router-view :name="'Home'"/>
     <div class="centerPanel"><router-view/></div>
 
@@ -17,8 +17,7 @@
         name: 'WebStoreApp',
         computed:{
           data(){
-            console.log(this.$store.state.menus.mainMenu)
-            return this.$store.state.menus.mainMenu;
+            return this.$store.state.menus.mainMenu.pages;
           }
         },
     }

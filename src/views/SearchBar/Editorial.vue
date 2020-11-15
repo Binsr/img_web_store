@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Menu :data="data"></Menu>
+    <Menu :tabs="data"></Menu>
     <div><router-view/></div>
   </div>
 
@@ -12,7 +12,7 @@ import Menu from '@/components/basic_components/menu_components/Menu.vue';
 export default {
   computed: {
       data(){
-          return this.$store.state.menus.editorialMenu;
+          return this.$store.state.menus.editorialMenu.pages;
       }
   },
   components: {
