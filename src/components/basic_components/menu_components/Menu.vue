@@ -1,8 +1,8 @@
  <template>
-  <div class="main-menu-container">
-    <div class="main-menu__tabs-container">
-        <div v-for="tab in data.pages" :key="tab" class="main-menu__tab">
-            <router-link :to="tab.link"><span class="main-menu-text"> {{tab.message.toUpperCase()}} </span></router-link>
+  <div class="menu-container">
+    <div class="menu__tabs-container">
+        <div v-for="tab in dataC.pages" :key="tab" class="menu__tab">
+            <router-link :to="tab.link"><span class="menu-text"> {{tab.message.toUpperCase()}} </span></router-link>
         </div>
     </div>
   </div>
@@ -11,8 +11,13 @@
 <script>
 export default {
     components: {},
-    name: 'MainMenu',
+    name: 'Menu',
     props: ['data'],
+    computed:{
+      dataC(){
+        return this.data;
+      }
+    }
 }
 </script>
 
@@ -21,25 +26,25 @@ export default {
   border-color: black;
 }
 
-.main-menu-container{
+.menu-container{
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.main-menu__tabs-container{
+.menu__tabs-container{
   display: flex;
   margin: auto;
   
 }
-.main-menu__tab{
+.menu__tab{
   width: max-content;
   box-sizing: border-box;
   margin: 0 3vw 0 3vw;
   color: #000 !important;
 }
 
-.main-menu__tab a{
+.menu__tab a{
   font-weight: 400;
   justify-content: center;
   display: flex;
@@ -51,7 +56,7 @@ export default {
   border-style: solid;
   border-color: white;
 }
-.main-menu-text{
+.menu-text{
     color: #000;
     font-weight: 300;
     font-size: 14px;
@@ -66,7 +71,7 @@ export default {
   color: white important;
 }
 
-.main-menu__tab:hover{
+.menu__tab:hover{
   opacity: 0.9;
 }
 </style>

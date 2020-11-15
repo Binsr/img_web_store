@@ -1,18 +1,18 @@
 <template>
   <div>
     <SearchSection></SearchSection>
-    <MainMenu :data="data"></MainMenu>
-    <router-view name="Home"/>
+    <Menu :data="data"></Menu>
+    <router-view :name="'Home'"/>
     <div class="centerPanel"><router-view/></div>
 
   </div>
 </template>
 <script>
-    import MainMenu from '@/components/basic_components/menu_components/MainMenu.vue';
+    import Menu from '@/components/basic_components/menu_components/Menu.vue';
     import SearchSection from '@/components/basic_layout/SearchSection.vue';
     export default {
         components: {
-            MainMenu, SearchSection,
+            Menu, SearchSection,
         },
         name: 'WebStoreApp',
         computed:{

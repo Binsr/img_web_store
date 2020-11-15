@@ -1,20 +1,6 @@
 <template>
-
-  <div class="main-menu-container">
-    <div class="main-menu__tabs-container">
-        <div class="main-menu__tab">
-            <router-link to="/editorial/"><span class="main-menu-text">{{$store.state.msg.pages.editorial.page1.toUpperCase()}}</span></router-link>
-        </div>
-        <div class="main-menu__tab"> 
-            <router-link to="/editorial/news"><span class="main-menu-text">{{$store.state.msg.pages.editorial.page2.toUpperCase()}}</span></router-link>
-        </div>
-        <div class="main-menu__tab">
-            <router-link to="/editorial/sports"><span class="main-menu-text">{{$store.state.msg.pages.editorial.page3.toUpperCase()}}</span></router-link>
-        </div>
-        <div class="main-menu__tab">
-            <router-link to="/editorial/entertainment"><span class="main-menu-text">{{$store.state.msg.pages.editorial.page4.toUpperCase()}}</span></router-link>
-        </div>
-    </div>
+  <div>
+    <Menu :data="data"></Menu>
     <div><router-view/></div>
   </div>
 
@@ -22,15 +8,15 @@
 
 <script>
 // @ is an alias to /src
-
+import Menu from '@/components/basic_components/menu_components/Menu.vue';
 export default {
   computed: {
-    COMING_SOON(){
-      return this.$store.state.COMING_SOON;
-    }
+      data(){
+          return this.$store.state.menus.editorialMenu;
+      }
   },
-  name: 'Home',
   components: {
+    Menu
   }
 }
 </script>
