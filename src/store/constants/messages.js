@@ -24,5 +24,7 @@ export default{
     },
     searchBarTitle: "Find the perfect image for your next creative project",
     login: "login/SINGUP",
-    chart: "Shopping Chart"
+    chart: "Shopping Chart",
+    username: "username",
+    password: "password"
 }

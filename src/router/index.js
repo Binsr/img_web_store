@@ -3,6 +3,7 @@ import Home  from '../views/SearchBar/Home.vue'
 import SearchBarView from '../views/SearchBarView.vue'
 import LoginView from '../views/LoginView.vue'
 import ShoppingCartView from '../views/ShoppingCartView.vue'
+//TODO PROBAJ DA IMPORTUJES OVDE MESSAGES I DA DINAMICKI SETUJES LINKOVE
 ShoppingCartView
 const routes = [
   {
@@ -62,14 +63,21 @@ const routes = [
     ]
   },
   {
-  path: '/login',
+  path: '/login-singup',
     name: 'LoginView',
     component: LoginView,
     children: [
       {
         path: '',
-        name: 'Home',
-        component: Home
+        component: () => {
+          return import( '../views/Login/LoginForm.vue')
+        },
+      },
+      {
+        path: 'signup',
+        component: () => {
+          return import( '../views/Login/SignUpForm.vue')
+        },
       }
     ]
   },

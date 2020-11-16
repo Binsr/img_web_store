@@ -1,14 +1,18 @@
 <template>
   <div>
       <img class="cover-img" :src="coverImg">
-      <LoginForm class="login-form"/> <!-- TODO: OVO TREBA DA BUDE ROUTER VIEW -->
+      <div class="login-form">
+        <router-link class="routerLink" to="/login-singup"><p>Login</p></router-link>
+        <router-link class="routerLink" to="/login-singup/signup"><p>signup</p></router-link>
+        <router-view/>
+      </div>
   </div>
 </template>
 <script>
-    import LoginForm from '@/views/Login/LoginForm.vue';
+
     export default {
         components: {
-            LoginForm
+
         },
         name: 'Login',
         computed:{

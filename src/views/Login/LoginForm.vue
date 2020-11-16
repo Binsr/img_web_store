@@ -1,7 +1,7 @@
 <template>
-      <div>
-        <div class="input"><div class="textHolder">USERNAME</div></div>
-        <div class="input"><div class="textHolder">PASSWORD</div></div>
+      <div class="panel">
+        <div class="input"><div class="textHolder">{{$store.state.msg.username}}</div></div>
+        <div class="input"><div class="textHolder">{{$store.state.msg.password}}</div></div>
       </div>
 </template>
 <script>
@@ -19,7 +19,9 @@
 </script>
 
 <style>
+.panel{
 
+}
 
 .textHolder{
     margin: auto;
