@@ -1,10 +1,10 @@
 <template>
       <div class="panel">
-        <div class="input"><div class="textHolder">first name</div></div>
-        <div class="input"><div class="textHolder">last name</div></div>
-        <div class="input"><div class="textHolder">e-mail</div></div>
-        <div class="input"><div class="textHolder">password</div></div>
-        <div class="basic-text">Yes i want emails with visual inspiration, special offers and more.</div>
+        <div class="input"><div class="textHolder">{{$store.state.msg.name}}</div></div>
+        <div class="input"><div class="textHolder">{{$store.state.msg.lname}}</div></div>
+        <div class="input"><div class="textHolder">{{$store.state.msg.mail}}</div></div>
+        <div class="input"><div class="textHolder">{{$store.state.msg.pass}}</div></div>
+        <div class="basic-text">{{$store.state.msg.singUpText1}}</div>
       </div>
 </template>
 <script>

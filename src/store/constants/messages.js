@@ -26,5 +26,9 @@ export default{
     login: "login/SINGUP",
     chart: "Shopping Chart",
     username: "username",
-    password: "password"
+    pass: "password",
+    name: "first name",
+    lname: "last name",
+    mail: "email",
+    singUpText1: "Yes i want emails with visual inspiration, special offers and more."
 }

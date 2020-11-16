@@ -1,7 +1,7 @@
 <template>
       <div class="panel">
         <div class="input"><div class="textHolder">{{$store.state.msg.username}}</div></div>
-        <div class="input"><div class="textHolder">{{$store.state.msg.password}}</div></div>
+        <div class="input"><div class="textHolder">{{$store.state.msg.pass}}</div></div>
       </div>
 </template>
 <script>
