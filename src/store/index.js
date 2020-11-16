@@ -5,6 +5,7 @@ import creativeImages from './images/creativeImages.js'
 import freeImages from './images/freeImages.js'
 import menuConst from './constants/menus.js'
 import messages from './constants/messages.js'
+import coverImages from './constants/coverImages'
 
 export default createStore({
   state: {
@@ -22,7 +23,8 @@ export default createStore({
     creativeSectionsDataParsed: creativeImages.parsedImages,
     freeImagesParsed: freeImages.parsedImages, 
     menus: menuConst,
-    msg: messages
+    msg: messages,
+    covImg: coverImages
   },
   mutations: {
   },
