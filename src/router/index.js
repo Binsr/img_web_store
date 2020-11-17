@@ -20,7 +20,7 @@ const routes = [
         component: () => import( '../views/SearchBar/Editorial.vue'),
         children: [
           {
-            path: '',
+            path: 'all',
             component: () => {
               return import( '../views/SearchBar/EditorialSubViews/All.vue')
             },

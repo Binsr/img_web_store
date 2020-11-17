@@ -24,7 +24,7 @@ export default{
         pages:[
             {
                 message: messages.pages.editorial.page1,
-                link: createLink(messages.pages.editorial.fullName)
+                link: createLink(messages.pages.editorial.fullName) + createLink(messages.pages.editorial.page1)
             },
             {
                 message: messages.pages.editorial.page2,

@@ -24,11 +24,14 @@ export default{
     },
     searchBarTitle: "Find the perfect image for your next creative project",
     login: "login/SINGUP",
+    signIn: "SIGN IN",
+    welcome: "Welcome back",
+    register: "REGISTER",
     chart: "Shopping Chart",
     username: "username",
     pass: "password",
     name: "first name",
     lname: "last name",
     mail: "email",
-    singUpText1: "Yes i want emails with visual inspiration, special offers and more."
+    registerText1: "Yes i want emails with visual inspiration, special offers and more."
 }

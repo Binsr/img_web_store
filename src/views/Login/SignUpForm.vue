@@ -4,7 +4,7 @@
         <div class="input"><div class="textHolder">{{$store.state.msg.lname}}</div></div>
         <div class="input"><div class="textHolder">{{$store.state.msg.mail}}</div></div>
         <div class="input"><div class="textHolder">{{$store.state.msg.pass}}</div></div>
-        <div class="basic-text">{{$store.state.msg.singUpText1}}</div>
+        <div class="basic-text">{{$store.state.msg.registerText1}}</div>
       </div>
 </template>
 <script>

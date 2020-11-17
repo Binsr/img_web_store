@@ -1,5 +1,6 @@
 <template>
       <div class="panel">
+        <div>{{$store.state.msg.welcome}}</div>
         <div class="input"><div class="textHolder">{{$store.state.msg.username}}</div></div>
         <div class="input"><div class="textHolder">{{$store.state.msg.pass}}</div></div>
       </div>
