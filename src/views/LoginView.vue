@@ -31,7 +31,7 @@
     position: fixed;
     top: 20vh;
     width: 400px;
-    height: 500px;
+    height: auto;
     background-color: white;
     right: 10vw;
 }
@@ -59,14 +59,5 @@
     width: min-content;
 }
 
-.input{
-    width: 300px;
-    height: 40px;
-    background-color: gray;
-    margin: 10px auto 10px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 </style>

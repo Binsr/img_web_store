@@ -25,14 +25,5 @@
     width: min-content;
 }
 
-.input{
-    width: 300px;
-    height: 40px;
-    background-color: gray;
-    margin: 10px auto 10px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 </style>
