@@ -2,7 +2,8 @@
       <div class="panel">
         <div class="header-msg">{{$store.state.msg.welcome}}</div>
         <input  v-on:input="usrdata.username = $event.target.value" class="input">
-        <input  v-on:input="usrdata.password = $event.target.value" class="input">
+        <input  :type="passwordFieldType" v-on:input="usrdata.password = $event.target.value" class="input">
+        <button type="password" v-on:click="switchVisibility()">Show/Hide</button>
         <div v-on:click="signInClick" class="signBtn">{{$store.state.msg.signIn}}</div>
       </div>
 </template>
@@ -11,19 +12,26 @@
     export default {
         components: {
         },
+        data(){
+          return {passwordFieldType: "password"}
+        },
         name: 'LoginForm',
         computed:{
           usrdata(){
             return {
               username: "user",
-              password: "pass"
+              password: "pass",
             }
-          }
+          },
+          
         },
         methods: {
           signInClick() {
             alert("username: " + this.usrdata.username + "\n" + "password: " + this.usrdata.password);//signal i am clicked thats all i handle 😜
           },
+          switchVisibility(){
+            this.passwordFieldType= this.passwordFieldType === 'password' ? 'text' : 'password';
+          }
         },
     }
 </script>
