@@ -1,4 +1,4 @@
-export default{
+export default{ 
     pages:{
         creative: {
                     fullName: 'creative'
@@ -33,5 +33,7 @@ export default{
     name: "first name",
     lname: "last name",
     mail: "email",
-    registerText1: "Yes i want emails with visual inspiration, special offers and more."
+    newToStock: "New to StockSerbia?",
+    registerText1: "Yes i want emails with visual inspiration, special offers and more.",
+    registerText2: "By clicking register button, I agree that i have read and accepted the Terms of Use and Privacy Policy."
 }

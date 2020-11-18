@@ -59,5 +59,59 @@
     width: min-content;
 }
 
+.passwordWrap{ 
+  display: flex;
+  margin: 10px auto;
+  width: max-content;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(24, 24, 24, 0.582);
+  width: 300px;
+  height: 40px;
+  padding-left: 10px;
+}
+.passwordWrap input,button{
+  border: none;
+  border-width: 0px;
+  box-shadow: 0;
+}
+.passwordWrap button{
+  width: 30px;
+  margin-left: auto;
+}
+.header-msg{
+  font-size: 23px;
+  color: #000;
+}
+
+.signBtn{
+  width: 300px;
+  height: 40px;
+  border-radius: 40px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  line-height: 42px;
+  background-color: red;
+  color: white;
+  font-weight: 700;
+}
+.textHolder{
+    margin: auto;
+    display: flex;
+    width: min-content;
+}
+.input{
+    width: 300px;
+    height: 40px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(24, 24, 24, 0.582);
+    margin: 10px auto 10px auto;
+    display: flex;
+    justify-content: center;
+    padding-left: 10px;
+    align-items: center;
+}
+
 
 </style>
