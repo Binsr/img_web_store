@@ -15,7 +15,10 @@
   }
 </script>
 <style>
+:root {
+  --text-color-main: rgb(228, 228, 228);
 
+}
 *{
   padding: 0;
   margin: 0;
