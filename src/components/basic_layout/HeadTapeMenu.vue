@@ -25,6 +25,7 @@ export default {
 <style>
 
 .headingTapeWraper{
+    user-select: none;
     background-color:white;
     height: min-content; 
     width: 100%;

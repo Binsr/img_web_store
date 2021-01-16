@@ -17,7 +17,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .littleContainer{
     width: 90%;
     height: 400px;

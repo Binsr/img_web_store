@@ -3,7 +3,7 @@
   <div class="img-addToChart"></div>
   <div class="img-similarImages"></div>
   <div v-on:click="sendClickedSignal" :style="myStyles">
-    <img class="imgStyle" :src="this.imgSrc"/>
+    <img class="imgStyle" :src="imgSrc"/>
   </div>
 </div>
 </template>
