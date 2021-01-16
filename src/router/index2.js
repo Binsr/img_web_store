@@ -3,7 +3,6 @@ import Home  from '../views/SearchBar/Home.vue'
 import SearchBarView from '../views/SearchBarView.vue'
 import LoginView from '../views/LoginView.vue'
 import ShoppingCartView from '../views/ShoppingCartView.vue'
-import messages from '../store/constants/messages.js' 
 //TODO PROBAJ DA IMPORTUJES OVDE MESSAGES I DA DINAMICKI SETUJES LINKOVE
 ShoppingCartView
 const routes = [
@@ -17,24 +16,49 @@ const routes = [
         component: () => import( '../views/SearchBar/Home.vue')
       },
       {
-        path: messages.pages.mainMenu.page0.link,
-        component: () => import('../views/SearchBar/' + messages.pages.mainMenu.page0.view + '.vue') //Prepravi
+        path: 'editorial-content',
+        component: () => import( '../views/SearchBar/Editorial.vue'),
+        children: [
+          {
+            path: 'all',
+            component: () => {
+              return import( '../views/SearchBar/EditorialSubViews/All.vue')
+            },
+          },
+          {
+            path: 'entertainment',
+            component: () => {
+              return import( '../views/SearchBar/EditorialSubViews/Entertainment.vue')
+            },
+          },
+          {
+            path: 'news',
+            component: () => {
+              return import( '../views/SearchBar/EditorialSubViews/News.vue')
+            },
+          },
+          {
+            path: 'sports',
+            component: () => {
+              return import( '../views/SearchBar/EditorialSubViews/Sports.vue')
+            },
+          }
+        ]
       },
       {
-        path: messages.pages.mainMenu.page1.link,
-        component: () => import( '../views/SearchBar/' + messages.pages.mainMenu.page1.view + '.vue'),
+        path: '/stock-content',
+        name: 'Creative',
+        component: () => import('../views/SearchBar/Creative.vue') //Prepravi
       },
       {
-        path: messages.pages.mainMenu.page2.link,
-        component: () => import('../views/SearchBar/' + messages.pages.mainMenu.page2.view + '.vue')
+        path: '/vectors',
+        name: 'Vectors',
+        component: () => import('../views/SearchBar/Vectors.vue')
       },
       {
-        path: messages.pages.mainMenu.page3.link,
-        component: () => import('../views/SearchBar/' + messages.pages.mainMenu.page3.view + '.vue')
-      },
-      {
-        path: messages.pages.mainMenu.page4.link,
-        component: () => import('../views/SearchBar/' + messages.pages.mainMenu.page4.view + '.vue')
+        path: '/free',
+        name: 'Free',
+        component: () => import('../views/SearchBar/Free.vue')
       }
     ]
   },
