@@ -1,22 +1,18 @@
 <template>
   <div>
-    <Menu :tabs="data"></Menu>
-    <div><router-view/></div>
+    <div>Custom</div>
   </div>
 
 </template>
 
 <script>
 // @ is an alias to /src
-import Menu from '@/components/basic_components/menu_components/Menu.vue';
 export default {
   computed: {
-      data(){
-          return this.$store.state.menus.editorialMenu.pages;
-      }
+
   },
   components: {
-    Menu
+    
   }
 }
 </script>

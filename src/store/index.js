@@ -18,6 +18,9 @@ export default createStore({
       title: null,
       src: null
     },
+    activePage: {
+      pageName: "Nothing"
+    },
     vectorsSectionsDataParsed: vectorImages.parsedImages,
     homeSectionsData: homeImages.parsedImages,
     creativeSectionsDataParsed: creativeImages.parsedImages,

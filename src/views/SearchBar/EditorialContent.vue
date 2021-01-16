@@ -1,55 +1,65 @@
- <template>
-  <div class="menu-container">
-    <div class="menu__tabs-container">
-        <div v-for="tab in tabs" :key="tab" class="menu__tab">
-            <router-link  :to="tab.link"><span @click="setActivePageName(tab.link)" class="menu-text"> {{tab.message.toUpperCase()}} </span></router-link>
-        </div>
-    </div>
+<template>
+  <div>
+    <div>Editorial</div>
   </div>
+
 </template>
 
 <script>
+// @ is an alias to /src
 export default {
-    components: {},
-    name: 'Menu',
-    props: ['tabs'],
-    computed:{
-      dataC(){
-        return this.data;
-      }
-    },
-    methods:{
-      setActivePageName(name){
-        this.$store.state.activePage.pageName = name
-      }
-    }
+  computed: {
+
+  },
+  components: {
+    
+  }
 }
 </script>
 
 <style>
+.littleContainer{
+    width: 90%;
+    height: 400px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: red;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.littleContainer div{
+  width: max-content;
+  display: flex;
+  margin: auto;
+}
+
 .activeTab{
   border-color: black;
 }
 
-.menu-container{
+.main-menu-container{
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
-.menu__tabs-container{
+.main-menu__tabs-container{
   display: flex;
   margin: auto;
   
 }
-.menu__tab{
+.main-menu__tab{
   width: max-content;
   box-sizing: border-box;
   margin: 0 3vw 0 3vw;
   color: #000 !important;
 }
 
-.menu__tab a{
+.main-menu__tab a{
   font-weight: 400;
   justify-content: center;
   display: flex;
@@ -61,7 +71,7 @@ export default {
   border-style: solid;
   border-color: white;
 }
-.menu-text{
+.main-menu-text{
     color: #000;
     font-weight: 300;
     font-size: 14px;
@@ -76,7 +86,8 @@ export default {
   color: white important;
 }
 
-.menu__tab:hover{
+.main-menu__tab:hover{
   opacity: 0.9;
 }
+
 </style>

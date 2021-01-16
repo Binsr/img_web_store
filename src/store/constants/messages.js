@@ -1,26 +1,38 @@
 export default{ 
     pages:{
-        creative: {
-                    fullName: 'creative'
+        mainMenu:{
+            page0: { 
+                        fullName: 'STOCK CONTENT',
+                        link: 'stock-content',
+                        view: 'StockContent'
+
+            },
+            page1:{
+                        fullName: 'EDITORIAL CONTENT',
+                        link: 'editorial-content',
+                        view: 'EditorialContent'
+            },
+            page2:  {
+                        fullName: 'GRAPHICS',
+                        link: 'graphics',
+                        view: 'Graphics'
+            },
+            page3:     {
+                        fullName: 'FREE',
+                        link: 'free',
+                        view: 'Free'
+            },
+            page4: {
+                        fullName: 'CUSTOM',
+                        link: 'custom',
+                        view: 'Custom'
+            },
         },
-        editorial:{
-                    fullName: 'editorial',
-                    page1: 'All',
-                    page2: 'News',//OVO NEMA SMISLA PREPRAVI
-                    page3: 'Sports',
-                    page4: 'Entertainment'
-        },
-        vectors:  {
-                    fullName: 'vectors'
-        },
-        free:     {
-                    fullName: 'free'
-        },
-        home: "Home",
-        customImg: "Custom Images",
-        contact: "Contact us",
-        pricing: "Pricing",
-        faq: "FAQ"
+        home: "HOME",
+        pricing: "PRICING",
+        faq: "FAQ",
+        contact: "CONTACT US",
+        custom: "CUSTOM"
     },
     searchBarTitle: "Find the perfect image for your next creative project",
     login: "login/SINGUP",
