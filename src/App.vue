@@ -17,7 +17,7 @@
 <style>
 :root {
   --text-color-main: rgb(228, 228, 228);
-
+  --link-color: #2c3e50;
 }
 *{
   padding: 0;

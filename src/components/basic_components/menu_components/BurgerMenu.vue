@@ -92,7 +92,7 @@ export default {
   text-decoration: none;
 	font-size: 14px;
   font-weight: bold;
-  color: #2c3e50;
+  color: var(--link-color);
 }
 .active {
 	color: red;

@@ -119,6 +119,18 @@ export default {
   justify-content: flex-start;
   align-items: flex-start;
 }
+.section .title {
+  font-weight: bold;
+  margin-bottom: 13px;
+}
+.section a {
+  margin-bottom: 10px;
+  color: var(--text-color-main);
+  text-decoration: none;
+}
+.section a:hover {
+  text-decoration: underline;
+}
 .content .stagod-da-je-ovo {
   height: 100%;
   display: flex;
@@ -129,12 +141,6 @@ export default {
   height: 30px;
   border-radius: 3px;
   margin-left: 20px;
-}
-.section .title {
-  font-weight: bold;
-}
-.section a {
-  margin-top: 7px;
 }
 
 
